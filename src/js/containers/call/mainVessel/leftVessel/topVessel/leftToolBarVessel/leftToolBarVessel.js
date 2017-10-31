@@ -31,7 +31,7 @@ class LeftToolBarVesselSmart extends React.Component{
             <article id="tool_container" className="tool-container add-position-relative add-fl" >{/*工具区域*/}
                {/*<ToolButtonVesselSmart /> {/*工具按钮的所有组件*/}
                {/*<ToolExtendListVesselSmart /> 工具按钮对应的List列表Smart模块*/}
-               {/* gogotalk */}
+               {/* gogotalk 新增 */}
                 <ControlOverallBarSmart />  {/*gogotalk*/}
                 <WhiteboardToolBarSmart />  {/*gogotalk*/}
             </article>
