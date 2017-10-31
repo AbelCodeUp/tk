@@ -1,0 +1,63 @@
+import React from 'react'
+import eventObjectDefine from 'eventObjectDefine';
+import rename from 'TkConstant'
+import './static/index.css'
+
+class Video extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+       	this.state={
+       		open:true
+       }
+    }
+    
+    componentDidMount(){
+      	let myPlayer=videojs("uploaded-video", {}, function(){
+				  // Player (this) is initialized and ready.
+				  
+				});
+		
+//		var that=this;
+//  	eventObjectDefine.CoreController.addEventListener('playVideo',function(result){//监听来自播放列表的点击事件，获取src播放
+//  		alert('本地播放video')
+//  		that.refs.video.src=result.message.videoSrc;
+//  		that.refs.mp4.style.display="inline-block";
+//				//videojs
+//	    	var myPlayer=videojs("uploaded-video", {}, function(){
+//				  // Player (this) is initialized and ready.
+//				  
+//				});
+//				myPlayer.play();
+//			
+//  		
+//  	})
+//  	eventObjectDefine.CoreController.addEventListener(rename.EVENTTYPE.RoomEvent.roomPubmsg,(pubMsgEvent)=>{
+//      if(pubMsgEvent.message.name=="MediaProgress"){
+//      	alert('服务器播放video')
+//      	that.refs.video.src=pubMsgEvent.message.data.videoSrc;
+//      	that.refs.mp4.style.display="inline-block";
+//      	//videojs
+//		    	var myPlayer=videojs("uploaded-video", {}, function(){
+//					  // Player (this) is initialized and ready.
+//					  
+//					});
+//					myPlayer.play();
+//      }
+//  		
+//  	})
+    }
+    render() {
+    	return(
+    		<div id="video-box" ref="mp4" style={{display:this.state.open?'block':'none'}}>
+	    		<div id="mp4">
+		    		<video id="uploaded-video" className="video-js" controls  preload="auto" >
+		    			<source  ref="video" src="https://192.168.1.17:443/upload/20170811_111901_dlyzsowh-1.mp4" type="video/mp4"/>
+		    		</video>
+			    </div>
+		    </div>
+    	)
+    	
+    }
+}
+
+export default Video;

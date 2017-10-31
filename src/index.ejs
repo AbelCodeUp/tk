@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;" id="all_root"  data-appVersions="<%= htmlWebpackPlugin.options.appVersions %>" >
+<head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8" />
+</head>
+<body class="normal"  style="overflow: hidden; position: relative;" >
+<section id="tk_app"  class="add-position-absolute-top0-left0" style="width: 100%;height: 100%;" ></section>
+<script type="text/javascript"  charset="UTF-8" src="<%= htmlWebpackPlugin.options.sdkDirPreFix %>libs/js/cloudvPlayer.min.js"></script>
+<script type="text/javascript"  charset="UTF-8" src="<%= htmlWebpackPlugin.options.sdkDirPreFix %>js/plugs/clappr-video360.min.js"></script>
+<script type="text/javascript"  charset="UTF-8" src="<%= htmlWebpackPlugin.options.sdkDirPreFix %>libs/js/adp/<%= htmlWebpackPlugin.options.adpName %>.js?versions=<%= htmlWebpackPlugin.options.adpVersions %>"></script>
+<script>
+    ;(function () {
+        var sdkDevStr =  "<%= htmlWebpackPlugin.options.__SDKDEV__ %>" ;
+        window.__SDKDEV__  =  sdkDevStr === 'true' ;
+    })();
+</script>
+<script type="text/javascript"  charset="UTF-8" src="<%= htmlWebpackPlugin.options.sdkDirPreFix %>libs/js/tk/<%= htmlWebpackPlugin.options.sdkName %>.js?versions=<%= htmlWebpackPlugin.options.sdkVersions %>"></script>
+<script type="text/javascript"  charset="UTF-8" src="<%= htmlWebpackPlugin.options.sdkDirPreFix %>js/plugs/literally/js/<%= htmlWebpackPlugin.options.lcName %>.js?versions=<%= htmlWebpackPlugin.options.lcVersions %>"></script>
+
+</body>
+</html>

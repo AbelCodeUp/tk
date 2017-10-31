@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.hvideo{
+    display:flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    height: 100%;
+}
+
+.vvideo{
+  display:flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+     width: 100%;
+     height: 100%;
+ }
+
+/*.video-wrap:hover .video-hover-function-container {
+    display:block;
+}*/
+
+/*.video-wrap .video-hover-function-container {
+    display:block;
+}*/
+
+
+.v-user-update.on{
+    background-image: url(../../../../img/call_layout/left/video/icon_user_on.png);
+}
+.v-device-microphone.on {
+    background-image: url(../../../../img/call_layout/left/video/icon_audio_on.png);
+}
+ .v-device-video.on {
+    background-image: url(../../../../img/call_layout/left/video/icon_video_on.png);
+}
+.v-user-pen.on {
+    background-image: url(../../../../img/call_layout/left/video/icon_tools_on.png);
+}
+.v-user-update.off{
+    background-image: url(../../../../img/call_layout/left/video/icon_user_off.png);
+}
+.v-device-microphone.off {
+    background-image: url(../../../../img/call_layout/left/video/icon_audio_off.png);
+}
+.v-device-open-close .v-device-video.off {
+    background-image: url(../../../../img/call_layout/left/video/icon_video_off.png);
+}
+.v-user-pen.off {
+    background-image: url(../../../../img/call_layout/left/video/icon_tools_off.png);
+}
+.v-device-open-close .v-device-video.disablevideo {
+    background-image: url(../../../../img/call_layout/left/video/icon_video_disabled.png);
+}
+ .v-name-wrap .v-device-open-close .v-device-microphone.disablevideo {
+    background-image: url(../../../../img/call_layout/left/video/icon_audio_disabled.png);
+}
+tk-icon-after-container .tk-listitem-icon.hand-icon {
+    background-image: url(../../../../img/call_layout/left/video/icon_hand.png);
+}
+tk-icon-after-container .tk-listitem-icon.hand-icon.off {
+    display: none!important;
+}
+.tk-icon-after-container .tk-listitem-icon.hand-icon.on {
+    display: block!important;
+}
