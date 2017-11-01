@@ -229,7 +229,8 @@ class WhiteboardToolBarSmart extends React.Component{
         let { smipleColorElementArray  , moreColorElementArray} = that._loadSmipleAndMoreListToArray( that.colors.smipleList  , that.colors.moreList );
         let {mouse , laser , brush , text , shape , undo , redo , eraser  , clear ,colorAndSize} = that.state.showItemJson ;
         return (
-            <ol className="add-fl clear-float h-tool" id="header_tool_vessel"  style={{display:!that.state.show ? 'none' : ''}}  > {/*白板工具栏*/}
+            // gogotalk
+            <ol className="add-fl gogo_leftbar_ban clear-float h-tool" id="header_tool_vessel"  style={{display:!that.state.show ? 'none' : ''}}  > {/*白板工具栏*/}
                 <li className="tool-li tl-mouse"  id="whiteboard_tool_vessel_mouse"  style={{display:!mouse?'none':undefined }} >
                     <button className="header-tool"  title={TkGlobal.language.languageData.header.tool.mouse.title}  id="tool_mouse"   onClick={that.allLiClick.bind(that , 'whiteboard_tool_vessel_mouse' , true , false , true) }  >
                         <span className="tool-img-wrap"></span>

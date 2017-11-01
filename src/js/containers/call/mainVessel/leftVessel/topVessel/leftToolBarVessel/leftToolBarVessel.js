@@ -15,28 +15,33 @@ import "./css/cssLeftToolBarVessel.css";
 import ControlOverallBarSmart from '../rightContentVessel/whiteboardToolAndControlOverallBar/controlOverallBar';
 import WhiteboardToolBarSmart from '../rightContentVessel/whiteboardToolAndControlOverallBar/whiteboardToolBar';
 
-class LeftToolBarVesselSmart extends React.Component{
-    constructor(props){
+class LeftToolBarVesselSmart extends React.Component {
+    constructor(props) {
         super(props);
     };
     componentDidMount() { //在完成首次渲染之前调用，此时仍可以修改组件的state
-        const that = this ;
+        const that = this;
     };
     componentWillUnmount() { //组件被移除之前被调用，可以用于做一些清理工作，在componentDidMount方法中添加的所有任务都需要在该方法中撤销，比如创建的定时器或添加的事件监听器
     };
 
-    render(){
-        let that = this ;
+    render() {
+        let that = this;
         return (
             <article id="tool_container" className="tool-container add-position-relative add-fl" >{/*工具区域*/}
-               {/*<ToolButtonVesselSmart /> {/*工具按钮的所有组件*/}
-               {/*<ToolExtendListVesselSmart /> 工具按钮对应的List列表Smart模块*/}
-               {/* gogotalk 新增11111 */}
-                <ControlOverallBarSmart />  {/*gogotalk*/}
-                <WhiteboardToolBarSmart />  {/*gogotalk*/}
+                {/*<ToolButtonVesselSmart /> {/*工具按钮的所有组件*/}
+                {/*<ToolExtendListVesselSmart /> 工具按钮对应的List列表Smart模块*/}
+                {/* gogotalk 新增11111 */}
+                <div className="gogotalk_leftbar_box">
+                    <div className="gogotalk_left_top_banner">
+
+                    </div>
+                    <ControlOverallBarSmart />  {/*gogotalk*/}
+                    <WhiteboardToolBarSmart />  {/*gogotalk*/}
+                </div>
             </article>
         )
     };
 };
-export default  LeftToolBarVesselSmart;
+export default LeftToolBarVesselSmart;
 

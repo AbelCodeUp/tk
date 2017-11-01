@@ -459,11 +459,11 @@ if(sourceMap){
  * （开启热更新，并自动打开浏览器）
  * */
 if (devServer) {
-    var devServerIp = '192.168.0.169' ;
+    var devServerIp = '192.168.0.103';
     var devServerPort = 8444 ;
     var devServerProtocol = 'https' ;
     var devServerRouter = 'login' ;
-    var devServerParams = 'host=192.168.1.17&domain=test&param=UaToBLfsrWeTzK9tOXd5AUs9ujQlWvQ7WJWrsxt8-Sg15NDR1_DhoIY7zRuP1Iir_Uf-du-RAPUzScctU-KV6uar-lE9ylWh-ykZFg-TjQah_9U9Ee58grREa2Q2DE8gOCZpcalQfkpbfIl7PR0ENg&roomtype=0&timestamp='+new Date().getTime() ;
+    var devServerParams = 'host=192.168.1.17&domain=test&param=UaToBLfsrWeCdYeh31Ap-0s9ujQlWvQ7WJWrsxt8-Sg15NDR1_DhoLpO-ZENxEMN_Uf-du-RAPVhKGpP-h0YzGbHk_-HRRiX-ykZFg-TjQah_9U9Ee58grREa2Q2DE8glqpDhorYeqtbfIl7PR0ENg&roomtype=0&refresh_thirdid=05554096-1cb1-bd17-5522-63722e91fe6f&_k=d45igq&timestamp=' + new Date().getTime();
     config = Merge(
         config,
         {

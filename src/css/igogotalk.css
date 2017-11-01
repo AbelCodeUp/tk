@@ -14,6 +14,30 @@
 .igogotalk .tool-container{
     width: 3.3rem!important;
 }
+.igogotalk .gogotalk_leftbar_box{
+    width:2.3rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.igogotalk .gogotalk_leftbar_box ol{
+    overflow: auto;
+    width: 100%;
+    margin-top: -0.1rem;
+}
+.igogotalk .gogotalk_leftbar_box .gogo_leftbar_ban{
+    height: 5rem;
+}
+.igogotalk .gogotalk_leftbar_box ol>li{
+    width: 1.3rem;
+    height: 1.3rem;
+    float: none;
+    margin: 0 auto;
+}
+.igogotalk .gogotalk_left_top_banner{
+    height: 1.6rem;
+    background: url('../img/gogo_img/leftbar_top.png')no-repeat center;
+    background-size: 100% 100%;
+}
 /* .igogotalk .lc-tool-container{
     left: -2.3rem!important;
     width: 3.5rem;
