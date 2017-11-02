@@ -27,7 +27,12 @@ class Help extends React.Component {
     render() {
    		let helpProloadArray = this._loadProloadArray();
         return (
-            <div id="help" className={"tool-help-frame "+TkGlobal.language.name} onClick={this.changeImg.bind(this)} style={{display:this.state.show?'block':'none',height:'100%',position:'fixed',zIndex:99999}}>
+			
+
+			<div id="help" className={"tool-help-frame "+TkGlobal.language.name +" "+TkGlobal.format} onClick={this.changeImg.bind(this)} style={{display:this.state.show?'block':'none',height:'100%',position:'fixed',zIndex:99999}}>
+			{/* gogotalk增加------------- */}
+
+            {/*<div id="help" className={"tool-help-frame "+TkGlobal.language.name } onClick={this.changeImg.bind(this)} style={{display:this.state.show?'block':'none',height:'100%',position:'fixed',zIndex:99999}}> */}
             	<div className={this.state.className + " " + ( (rename.hasRole.roleChairman || rename.hasRole.roleTeachingAssistant || rename.hasRole.rolePatrol )? "teacher":"student")}></div>
 				{helpProloadArray}
             </div>
@@ -35,7 +40,7 @@ class Help extends React.Component {
     }
     changeImg(e){
     	let totalNum = (rename.hasRole.roleChairman || rename.hasRole.roleTeachingAssistant || rename.hasRole.rolePatrol )? 7:4;
-    	if(this.state.page < totalNum){//切换图片
+		if(this.state.page < totalNum){//切换图片
     		this.setState({
 	    		className:'bg'+(this.state.page+1),
 	    		page:this.state.page+1
