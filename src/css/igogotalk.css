@@ -162,10 +162,7 @@
 .igogotalk .main-content-wrap{
     height: calc(100% - 0.9rem)!important;
 }
-/*设备切换*/
-.igogotalk .startdetection .net-testing .device-test-header{
-	background-color: #3278fe;
-}
+
 /*右下角*/
 .igogotalk .chatbox,.igogotalk .chatbox .input-box{
 	background-color: #E5E7ED;
@@ -657,4 +654,12 @@
 }
  .igogotalk .bg4 .student{
 	background-image: url('../img/gogo_img/step_stu_4.png') !important;
+}
+
+/*设备检测 springfeng*/
+.igogotalk .startdetection .net-testing .device-test-header{
+	background-color: #ef5d3a;
+}
+.igogotalk .fixldy .next-st{
+    background-color: #ef5d3a !important;
 }
