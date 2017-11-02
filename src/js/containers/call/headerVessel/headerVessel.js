@@ -9,6 +9,8 @@
 import React from 'react';
 import LeftHeaderSmart from './left/leftHeader';
 import RightHeaderSmart from './right/rightHeader';
+// gogotalk
+import ToolButtonVesselSmart from '../mainVessel/leftVessel/topVessel/leftToolBarVessel/toolButtonVessel/toolButtonVessel';
 
 class HeaderVesselSmart extends React.Component{
     constructor(props){
@@ -23,6 +25,7 @@ class HeaderVesselSmart extends React.Component{
         return (
             <header id="header">
                 <section className="header-wrap clear-float"  id="header_container">
+                    <ToolButtonVesselSmart /> {/*工具按钮的所有组件 */}
                     <LeftHeaderSmart /> {/*左侧组件*/}
                     <RightHeaderSmart />{/*右侧组件*/}
                 </section>

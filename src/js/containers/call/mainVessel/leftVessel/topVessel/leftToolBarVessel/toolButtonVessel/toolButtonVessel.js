@@ -299,6 +299,7 @@ class ToolButtonVesselSmart extends React.Component{
                 <form method="post" className="account-basic-upload add-display-none"  id="uploadForm" encType="multipart/form-data" >
                     <input type="file" name="filedata" id="filedata"  accept="" />{/*.xls,.xlsx,.ppt,.pptx,.doc,.docx,.txt,.rtf,.pdf,.bmp,.jpg,.jpeg,.png,.flv,.mp4,.swf*/}
                 </form>
+                
             </article>
         )
     };

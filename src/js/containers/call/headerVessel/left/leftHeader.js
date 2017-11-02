@@ -8,6 +8,7 @@
 'use strict';
 import React from 'react';
 import TkGlobal from 'TkGlobal';
+import ClockTimeSmart from '../right/clockTime';
 import AudioPlayerSmart from './audioPlayer';
 import NetworkStatusSmart from './networkStatus/networkStatus';
 
@@ -29,6 +30,7 @@ class LeftHeaderSmart extends React.Component {
                 <span className="add-block add-fl h-logo-wrap add-display-none"></span>
                 { !TkGlobal.playback ?  <NetworkStatusSmart />: undefined }
                 { !TkGlobal.playback ? <AudioPlayerSmart /> : undefined }
+                { !TkGlobal.playback ? <ClockTimeSmart /> : undefined }
             </article>
         )
     };

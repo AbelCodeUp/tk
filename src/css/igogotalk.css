@@ -11,6 +11,102 @@
     box-sizing: border-box;
     padding: 0.2rem;
 }
+/* 头部 header */
+.igogotalk .header-wrap {
+    position: relative;
+}
+.igogotalk .header-wrap .tool-icon-wrap{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 0.48rem;
+    min-width: 2.2rem;
+    min-width: calc(2rem + 75px);
+    z-index: 1;
+}
+.igogotalk .header-wrap .h-right-wrap{
+    position: relative;
+    z-index: 2;
+}
+/* 设置 */
+.igogotalk .header-wrap .h-left-wrap{
+    width: calc(100% - 7.8rem);
+    margin-left: 4rem;
+}
+.igogotalk .header-wrap .h-left-wrap .h-time-wrap{
+    padding: 0 0.12rem;
+    border:1px dashed #fff;
+    text-align: center;
+    border-radius: 0.05rem;
+    color: #fff;
+    margin: 0.13rem 2rem 0 0;
+}
+.igogotalk .header-wrap .h-left-wrap .network-status-container{
+    padding-top: 0.15rem;
+}
+.igogotalk .header-wrap .h-left-wrap .h-time-wrap:before{
+    background-image: none!important;
+}
+.igogotalk .header-wrap .tool-icon-wrap{
+    overflow: hidden;
+}
+.igogotalk .header-wrap .h-right-wrap{
+    margin-right: 1.8rem;
+    width:4.9rem;
+}
+.igogotalk .header-wrap .h-right-wrap .h-btn-wrap{
+    flex: none!important;
+    width: 2rem;
+}
+.igogotalk .header-wrap .tool-icon-wrap .tk-button{
+    float: left;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.16rem;
+    margin-left: 0.3rem;
+    margin-right: 0.1rem;
+   
+}
+.igogotalk .header-wrap .tool-icon-wrap .tl-left-document-list{
+    
+    background: url('../img/gogo_img/icon_christmas_top_left_1.png');
+    background-size: 100%;
+    
+}
+.igogotalk .header-wrap .tool-icon-wrap .tl-left-media-document-list{
+    
+    background: url('../img/gogo_img/icon_christmas_top_left_2.png');
+    background-size: 100%;
+    
+}
+.igogotalk .header-wrap .tool-icon-wrap .tl-left-user-list{
+    
+    background: url('../img/gogo_img/icon_christmas_top_left_3.png');
+    background-size: 100%;
+    
+}
+.igogotalk .header-wrap .tool-icon-wrap .tl-left-setting{
+    
+    background: url('../img/gogo_img/icon_christmas_top_right_1.png');
+    background-size: 100%;
+    float:right!important;
+    
+}
+
+.igogotalk .header-wrap .tool-icon-wrap .tl-left-help{
+    background: url('../img/gogo_img/icon_christmas_top_right_2.png');
+    background-size: 100%;
+    float:right!important;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.16rem;
+    margin-left: 0.3rem;
+    margin-right: 0.1rem;
+}
+/* end */
 .igogotalk .lc-drawing canvas{
     background: #fff!important;
     width: 96.4%!important;
@@ -31,11 +127,10 @@
 	border-color: #fff;
 }
 .igogotalk .tool-container{
-    width: 3.3rem!important;
+    width: 2.5rem!important;
 }
 .igogotalk .gogotalk_leftbar_box{
-    width:2.3rem;
-    overflow: hidden;
+    width:1.3rem;
     margin: 0 auto;
 }
 .igogotalk .gogotalk_leftbar_box ol{
@@ -44,18 +139,20 @@
     margin-top: -0.1rem;
 }
 .igogotalk .gogotalk_leftbar_box .gogo_leftbar_ban{
-    height: 5rem;
+    height: 6.5rem;
 }
 .igogotalk .gogotalk_leftbar_box ol>li{
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1rem;
+    height: 1rem;
     float: none;
     margin: 0 auto;
 }
 .igogotalk .gogotalk_left_top_banner{
-    height: 1.6rem;
+    height: 1.3rem;
     background: url('../img/gogo_img/leftbar_top.png')no-repeat center;
     background-size: 100% 100%;
+    width: 2rem;
+    margin-left: -0.3rem;
 }
 /* .igogotalk .lc-tool-container{
     left: -2.3rem!important;
@@ -252,45 +349,50 @@
     color: #3278fe!important;
 }
 /* icon start*/
+.igogotalk .h-tool{
+    background-image: url('../img/gogo_img/left_bar_bg.png');
+    background-repeat:repeat-y;
+    background-size: 100% 100%; 
+}
 .igogotalk .h-tool.all-participant-function .tl-all-participant-gift .tool-img-wrap.on{
     background: url('../img/gogo_img/icon_jiangbei.png') no-repeat center!important;
     background-size: 100% 100%;
 }
 .igogotalk .h-tool li.tl-mouse .tool-img-wrap{
-    background: url('../img/gogo_img/icon_jiantou.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_huojian.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-laser .tool-img-wrap{
-    background: url('../img/gogo_img/icon_zhunxin.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_jiguangbi.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-pencil .tool-img-wrap{
-    background: url('../img/gogo_img/icon_qianbi.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_qianbi.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-text .tool-img-wrap{
-    background: url('../img/gogo_img/icon_ziti.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_shuru.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-shape .tool-img-wrap{
-    background: url('../img/gogo_img/icon_fangkuang.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_juxing.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-undo .header-tool.disabled  .tool-img-wrap{
-    background: url('../img/gogo_img/icon_chexiao.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_chexiao.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-eraser .header-tool.disabled  .tool-img-wrap{
-    background: url('../img/gogo_img/icon_xiangpi.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_xiangpi.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-clear .header-tool.disabled  .tool-img-wrap{
     background: url('../img/gogo_img/icon_shanchu.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li .tool-img-wrap .tool_triangle{
     background: url('../img/gogo_img/icon_tianchong.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-size: 50% 50%;
 }
 /* icon end */
 .igogotalk .curtom-select .select_option li:hover{
@@ -312,11 +414,30 @@
 .igogotalk .win-btn-container button.win-btn-no{
     border-color: #3278FE;
 }
-.igogotalk .h-btn-wrap .h-room-start{
-    background-color: #04C88E;
+
+.igogotalk .h-btn-wrap{
+    float: none!important;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 0.15rem;
 }
 .igogotalk .h-btn-wrap .h-room-end{
-    background-color: #F0390D;
+    color: #F0390D;
+    background: #dbdbdb;
+    box-shadow: 0 0 3px #eee;
+}
+.igogotalk .h-btn-wrap .h-room-start{
+    color: #F0390D;
+    background: #fff;
+    box-shadow: 0 0 3px #eee;
+}
+.igogotalk .h-btn-wrap .h-room-start:hover{
+    color: #F0390D!important;
+    background: #fff!important;
+}
+.igogotalk .h-btn-wrap .h-room-end:hover{
+    color: #F0390D!important;
+    background: #dbdbdb!important;
 }
 .igogotalk .send-message-btn{
     background-color: #3278fe;
