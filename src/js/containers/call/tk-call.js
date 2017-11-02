@@ -16,6 +16,12 @@ import TkUtils from 'TkUtils' ;
 import ServiceRoom from 'ServiceRoom' ;
 import HeaderVesselSmart from './headerVessel/headerVessel' ;
 import MainVesselSmart from './mainVessel/mainVessel' ;
+
+// 载入gogotalk组件
+import MainVesselSmart_gogotalk from './mainVessel/mainVessel_gogotalk' ;
+import TkConstant from 'TkConstant' ;
+// 载入gogotalk组件
+
 import JoinDetectionDeviceSmart from '../detectionDevice/joinDetectionDevice';
 import ReconnectingSmart from './reconnecting/reconnecting';
 import SupernatantDynamicPptVideoSmart from './supernatantDynamicPptVideo/supernatantDynamicPptVideo';
@@ -72,15 +78,28 @@ class TkCall extends React.Component{
         }
     };
 
+    //处理gogotalk自定义组件 springfeng
+    switchGogotalk(){ 
+        // alert(TkConstant.joinRoomInfo.roomtype);
+        if(TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype != TkConstant.ROOMTYPE.oneToOne ){
+          return  <MainVesselSmart_gogotalk />; 
+        }else{
+            return  <MainVesselSmart />;
+        }
+    }
+    //处理gogotalk自定义组件 springfeng
+    
     render(){
         const that = this ;
+        const MainCom=that.switchGogotalk();
+        // alert(MainCom)
         //let pptIframe = document.getElementById("newppt_frame").contentWindow;
         return (
             <section className="add-position-relative" id="room"  style={{width:'100%' , height:'100%'}}>
                 <article  className="all-wrap clear-float" id="all_wrap" onClick={that.callAllWrapOnClick.bind(that) } >
                     <HeaderVesselSmart />   {/*头部header*/}
                     <Help/>{/*xueln 帮助组建*/}
-                    <MainVesselSmart />   {/*主体内容*/}
+                    {MainCom}
                     <ReconnectingSmart /> {/*重新连接*/}
                     <SupernatantDynamicPptVideoSmart /> {/*动态PPT正在播放浮层*/}
                     <JoinDetectionDeviceSmart isEneter={false} saveLocalStorage={false} clearFinsh={true} handlerOkCallback={that.handlerOkCallback.bind(that)}  backgroundColor='rgba(0,0,0,0.5)' okText={TkGlobal.language.languageData.login.language.detection.button.ok.text} titleText={TkGlobal.language.languageData.login.language.detection.deviceTestHeader.deviceSwitch.text} />{/*设备切换*/}
