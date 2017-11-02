@@ -367,32 +367,32 @@
     background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-pencil .tool-img-wrap{
-    background: url('../img/gogo_img/icon_qianbi.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_qianbi.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-text .tool-img-wrap{
-    background: url('../img/gogo_img/icon_ziti.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_shuru.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-shape .tool-img-wrap{
-    background: url('../img/gogo_img/icon_fangkuang.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_juxing.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-undo .header-tool.disabled  .tool-img-wrap{
-    background: url('../img/gogo_img/icon_chexiao.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_chexiao.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-eraser .header-tool.disabled  .tool-img-wrap{
-    background: url('../img/gogo_img/icon_xiangpi.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-image: url('../img/gogo_img/left_bar_xiangpi.png')!important;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-clear .header-tool.disabled  .tool-img-wrap{
     background: url('../img/gogo_img/icon_shanchu.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-size: 50% 50%;
 }
 .igogotalk .h-tool li .tool-img-wrap .tool_triangle{
     background: url('../img/gogo_img/icon_tianchong.png') no-repeat center!important;
-    background-size: 100% 100%;
+    background-size: 50% 50%;
 }
 /* icon end */
 .igogotalk .curtom-select .select_option li:hover{
