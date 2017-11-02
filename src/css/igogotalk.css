@@ -625,36 +625,36 @@
 
 
 /* gogotalk增加  引导页 springfeng*/
-.chinese .igogotalk .bg1{
+.igogotalk .bg1{
 	background-image: url('../img/gogo_img/step_tea_1.png') !important;
 }
-.chinese .igogotalk .bg2{
+ .igogotalk .bg2{
 	background-image: url('../img/gogo_img/step_tea_2.png') !important;
 }
-.chinese .igogotalk .bg3{
+ .igogotalk .bg3{
 	background-image: url('../img/gogo_img/step_tea_3.png') !important;
 }
-.chinese .igogotalk .bg4{
+ .igogotalk .bg4{
 	background-image: url('../img/gogo_img/step_tea_4.png') !important;
 }
-.chinese .igogotalk .bg5{
+ .igogotalk .bg5{
 	background-image: url('../img/gogo_img/step_tea_5.png') !important;
 }
-.chinese .igogotalk .bg6{
+ .igogotalk .bg6{
 	background-image: url('../img/gogo_img/step_tea_6.png') !important;
 }
-.chinese .igogotalk .bg7{
+ .igogotalk .bg7{
 	background-image: url('../img/gogo_img/step_tea_7.png') !important;
 }
-.chinese .igogotalk .bg1 .student{
+ .igogotalk .bg1 .student{
  	background-image: url('../img/gogo_img/step_stu_1.png') !important;
 }
-.chinese  .igogotalk .bg2 .student{
+  .igogotalk .bg2 .student{
 	background-image: url('../img/gogo_img/step_stu_2.png') !important;
 }
-.chinese  .igogotalk .bg3 .student{
+  .igogotalk .bg3 .student{
 	background-image: url('../img/gogo_img/step_stu_3.png') !important;
 }
-.chinese .igogotalk .bg4 .student{
+ .igogotalk .bg4 .student{
 	background-image: url('../img/gogo_img/step_stu_4.png') !important;
 }

@@ -27,12 +27,7 @@ class Help extends React.Component {
     render() {
    		let helpProloadArray = this._loadProloadArray();
         return (
-			
-
-			<div id="help" className={"tool-help-frame "+TkGlobal.language.name +" "+TkGlobal.format} onClick={this.changeImg.bind(this)} style={{display:this.state.show?'block':'none',height:'100%',position:'fixed',zIndex:99999}}>
-			{/* gogotalk增加------------- */}
-
-            {/*<div id="help" className={"tool-help-frame "+TkGlobal.language.name } onClick={this.changeImg.bind(this)} style={{display:this.state.show?'block':'none',height:'100%',position:'fixed',zIndex:99999}}> */}
+            <div id="help" className={"tool-help-frame "+TkGlobal.language.name } onClick={this.changeImg.bind(this)} style={{display:this.state.show?'block':'none',height:'100%',position:'fixed',zIndex:99999}}>
             	<div className={this.state.className + " " + ( (rename.hasRole.roleChairman || rename.hasRole.roleTeachingAssistant || rename.hasRole.rolePatrol )? "teacher":"student")}></div>
 				{helpProloadArray}
             </div>
