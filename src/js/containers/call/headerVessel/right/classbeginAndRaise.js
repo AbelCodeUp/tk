@@ -150,10 +150,11 @@ class ClassbeginAndRaiseSmart extends React.Component {
     render() {
         let that = this;
         let { classbeginInfo  , raiseInfo } = that.state ;
+        // gogotalk
         return (
             <div className="h-btn-wrap add-fl add-fr" id="room_controller_container"  style={{display:!(classbeginInfo.show || raiseInfo.show)?'none':''}} >
                 {classbeginInfo.show? <button
-                    className={"add-fl "+( classbeginInfo.disabled ?'disabled':'') + ( (TkGlobal.classBegin  || CoreController.handler.getAppPermissions('forcedEndClassBegin') )? ' h-room-end':' h-room-start' ) }
+                    className={""+( classbeginInfo.disabled ?'disabled':'') + ( (TkGlobal.classBegin  || CoreController.handler.getAppPermissions('forcedEndClassBegin') )? ' h-room-end':' h-room-start' ) }
                     disabled={classbeginInfo.disabled || undefined}  id="room_classBegin"
                     onClick={!classbeginInfo.disabled ? that.classbeginOnClick.bind(that): undefined } >
                     { (!classbeginInfo.classbegin && !CoreController.handler.getAppPermissions('forcedEndClassBegin')  ?TkGlobal.language.languageData.header.system.attend.text : TkGlobal.language.languageData.header.system.finish.text) }

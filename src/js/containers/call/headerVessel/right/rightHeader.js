@@ -37,12 +37,12 @@ class RightHeaderSmart extends React.Component {
             }
         }
     };
-
+    // gogotalk
     render() {
         let that = this;
         return (
             <article className={"h-right-wrap clear-float add-fr "+that.state.notClockTimeClass} id="header_right" >
-                { !TkGlobal.playback ? <ClockTimeSmart /> : undefined }
+                {/* !TkGlobal.playback ? <ClockTimeSmart /> : undefined */ }
                 { !TkGlobal.playback ? <ClassbeginAndRaiseSmart classbeginAndRaiseShowButtonCallback={that.classbeginAndRaiseShowButtonCallback.bind(that) } /> : undefined }
             </article>
         )

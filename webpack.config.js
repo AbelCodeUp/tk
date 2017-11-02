@@ -459,7 +459,7 @@ if(sourceMap){
  * （开启热更新，并自动打开浏览器）
  * */
 if (devServer) {
-    var devServerIp = '192.168.0.103';
+    var devServerIp = '192.168.0.105';
     var devServerPort = 8444 ;
     var devServerProtocol = 'https' ;
     var devServerRouter = 'login' ;
