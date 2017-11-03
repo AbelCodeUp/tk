@@ -1,7 +1,4 @@
-/*gogotalk*/
-.FreeScrollbar{
-    overflow: initial!important;
-}
+/*英联邦样式*/
 .igogotalk{
     background:url('../img/gogo_img/g_Christmas.png')no-repeat 100% 100%; 
 }
@@ -73,6 +70,14 @@
     margin-right: 0.1rem;
    
 }
+.igogotalk .left_bar_bottom_bg{
+    width: 2.5rem;
+    position: absolute;
+    height: 3rem;
+    bottom: -1rem;
+    background-image: url('../img/gogo_img/icon_Christmas_ren.png');
+    background-size: 100% auto;
+}
 .igogotalk .header-wrap .tool-icon-wrap .tl-left-document-list{
     
     background: url('../img/gogo_img/icon_christmas_top_left_1.png');
@@ -123,6 +128,9 @@
 .igogotalk .h-tool .tool-pencil-extend ul li,.igogotalk .h-tool .tool-text-extend ul li,.igogotalk .h-tool .tool-shape-extend ul li{
     border-bottom:0.01rem solid #2260d4;
 }
+.igogotalk .FreeScrollbar-vertical-track {
+    right: 2.7rem!important;
+}
 .igogotalk .header-tool-extend-option-wrap{
     border-top:0.01rem solid #2260d4;
 }
@@ -138,11 +146,12 @@
 }
 .igogotalk .gogotalk_leftbar_box ol{
     /* overflow: auto; */
-    width: 100%;
+    /* width: 100%; */
+    width: 1.3rem;
     margin-top: -0.1rem;
 }
 .igogotalk .gogotalk_leftbar_box .gogo_leftbar_ban{
-    height: 6.5rem;
+    /* height: 6.5rem; */
 }
 .igogotalk .gogotalk_leftbar_box ol>li{
     width: 1.4rem;
@@ -332,11 +341,11 @@
 .igogotalk .h-tool li .header-tool-extend{
     width: 1.8rem;
     left: 100%!important;
-    display: block!important;
+    /* display: block!important; */
 
     background-size: 100% 100%;
 
-    opacity: 1!important;
+    /* opacity: 1!important; */
 
     background: #fdeabb;
     border-radius: 0.15rem;
@@ -719,38 +728,3 @@
 
 
 
-
-/* gogotalk增加  引导页 springfeng*/
-.chinese .igogotalk .bg1{
-	background-image: url('../img/gogo_img/step_tea_1.png') !important;
-}
-.chinese .igogotalk .bg2{
-	background-image: url('../img/gogo_img/step_tea_2.png') !important;
-}
-.chinese .igogotalk .bg3{
-	background-image: url('../img/gogo_img/step_tea_3.png') !important;
-}
-.chinese .igogotalk .bg4{
-	background-image: url('../img/gogo_img/step_tea_4.png') !important;
-}
-.chinese .igogotalk .bg5{
-	background-image: url('../img/gogo_img/step_tea_5.png') !important;
-}
-.chinese .igogotalk .bg6{
-	background-image: url('../img/gogo_img/step_tea_6.png') !important;
-}
-.chinese .igogotalk .bg7{
-	background-image: url('../img/gogo_img/step_tea_7.png') !important;
-}
-.chinese .igogotalk .bg1 .student{
- 	background-image: url('../img/gogo_img/step_stu_1.png') !important;
-}
-.chinese  .igogotalk .bg2 .student{
-	background-image: url('../img/gogo_img/step_stu_2.png') !important;
-}
-.chinese  .igogotalk .bg3 .student{
-	background-image: url('../img/gogo_img/step_stu_3.png') !important;
-}
-.chinese .igogotalk .bg4 .student{
-	background-image: url('../img/gogo_img/step_stu_4.png') !important;
-}

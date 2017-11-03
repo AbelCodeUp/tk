@@ -91,6 +91,7 @@ class WhiteboardToolBarSmart extends React.Component{
     };
     /*所有li的点击事件处理*/
     allLiClick( clickId ,  active = false , more = false , removeOtherActive = true ){
+        $('.FreeScrollbar-vertical-track').css('zIndex',-1);
         let $li =  $("#header_tool_vessel").find("li") ;
         if(removeOtherActive){
             $li.removeClass('active') ;
@@ -109,7 +110,7 @@ class WhiteboardToolBarSmart extends React.Component{
                 }
             }
         }else{
-            $li.removeClass('more') ;
+            $li.removeClass('more');
         }
         if( clickId !== 'whiteboard_tool_vessel_text' ){
             $li.filter("#"+clickId).find(".header-tool-extend li[data-select=true]").trigger('click' , [true] );
@@ -121,6 +122,7 @@ class WhiteboardToolBarSmart extends React.Component{
 
     /*所有的扩展栏中点击事件处理*/
     allExtnedClick(clickId , clickType ){
+        
         const that = this ;
         switch (clickType){
             case  'pencil':
@@ -142,10 +144,14 @@ class WhiteboardToolBarSmart extends React.Component{
 
     /*所有li的鼠标移出事件处理*/
     allLiMouseLeave( elementId ){
-        $("#"+elementId).removeClass('more') ;
-        if(elementId === 'whiteboard_tool_vessel_color_strokesize'){
-            $("#"+elementId).removeClass('active') ;
-        }
+        $('.FreeScrollbar-vertical-track').css('zIndex',0);
+        window.setTimeout(()=>{
+            
+            $("#"+elementId).removeClass('more') ;
+            if(elementId === 'whiteboard_tool_vessel_color_strokesize'){
+                $("#"+elementId).removeClass('active') ;
+            }
+        },500)
     };
 
     /*改变大小的点击事件*/
@@ -231,8 +237,8 @@ class WhiteboardToolBarSmart extends React.Component{
         let {mouse , laser , brush , text , shape , undo , redo , eraser  , clear ,colorAndSize} = that.state.showItemJson ;
         return (
             // gogotalk
-            <div style={{width: '300px', height: '100px'}}>
-            <FreeScrollBar>        
+            <div style={{width: '4rem', height: '400px',position:'relative',zIndex:'999'}}>
+            <FreeScrollBar style={{width:'100%',height:'100%',overflow:'hidden'}}>        
             <ol className="add-fl gogo_leftbar_ban clear-float h-tool" id="header_tool_vessel"  style={{display:!that.state.show ? 'none' : ''}}  > {/*白板工具栏*/}
                 <li className="tool-li tl-mouse"  id="whiteboard_tool_vessel_mouse"  style={{display:!mouse?'none':undefined }} >
                     <button className="header-tool"  title={TkGlobal.language.languageData.header.tool.mouse.title}  id="tool_mouse"   onClick={that.allLiClick.bind(that , 'whiteboard_tool_vessel_mouse' , true , false , true) }  >
@@ -355,6 +361,8 @@ class WhiteboardToolBarSmart extends React.Component{
             </ol>
             
             </FreeScrollBar>
+            <div className="left_bar_bottom_bg">
+            </div>
             </div>
         )
     };
