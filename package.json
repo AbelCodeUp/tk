@@ -47,7 +47,8 @@
     "react": "^15.3.1",
     "react-dnd": "^2.5.1",
     "react-dnd-html5-backend": "^2.5.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "react-free-scrollbar": "^0.2.6"
   },
   "scripts": {
     "build": "webpack  --profile --progress --colors --display-error-details -p ",

@@ -14,6 +14,7 @@ import "./css/cssLeftToolBarVessel.css";
 
 import ControlOverallBarSmart from '../rightContentVessel/whiteboardToolAndControlOverallBar/controlOverallBar';
 import WhiteboardToolBarSmart from '../rightContentVessel/whiteboardToolAndControlOverallBar/whiteboardToolBar';
+import WhiteboardToolBarGogotalk from '../rightContentVessel/whiteboardToolAndControlOverallBar/whiteboardToolBar_gogotalk';
 
 class LeftToolBarVesselSmart extends React.Component {
     constructor(props) {
@@ -37,7 +38,7 @@ class LeftToolBarVesselSmart extends React.Component {
 
                     </div>
                     <ControlOverallBarSmart />  {/*gogotalk*/}
-                    <WhiteboardToolBarSmart />  {/*gogotalk*/}
+                    <WhiteboardToolBarGogotalk />  {/*gogotalk*/}
                 </div>
             </article>
         )

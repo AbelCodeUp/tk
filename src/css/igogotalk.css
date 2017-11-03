@@ -1,4 +1,7 @@
-/*英联邦样式*/
+/*gogotalk*/
+.FreeScrollbar{
+    overflow: initial!important;
+}
 .igogotalk{
     background:url('../img/gogo_img/g_Christmas.png')no-repeat 100% 100%; 
 }
@@ -134,7 +137,7 @@
     margin: 0 auto;
 }
 .igogotalk .gogotalk_leftbar_box ol{
-    overflow: auto;
+    /* overflow: auto; */
     width: 100%;
     margin-top: -0.1rem;
 }
@@ -142,8 +145,8 @@
     height: 6.5rem;
 }
 .igogotalk .gogotalk_leftbar_box ol>li{
-    width: 1rem;
-    height: 1rem;
+    width: 1.4rem;
+    height: 1.4rem;
     float: none;
     margin: 0 auto;
 }
@@ -305,16 +308,88 @@
     height: calc(100% - 0.08rem);
 }
 .igogotalk .lc-tool-container .h-tool{
-    background-color: red;
+    background-color:#fdeabb!important;
 }
-.igogotalk .h-tool li.active .header-tool{
-    background-color: #1250c4;
+.igogotalk .h-tool .tool-pencil-extend ul, .h-tool  .tool-text-extend ul, .h-tool .tool-shape-extend ul{
+    background-color:#fdeabb!important;
+    padding: 0 0.2rem;
+    color: #ce9912!important;
 }
-.igogotalk .h-tool li  .header-tool-extend{
-    background: #1250c4;
+.igogotalk .h-tool  .header-tool-extend ul li[data-select=true]{
+    background: none!important;
+    color:#684b02;
+}
+/*  */
+.igogotalk .h-tool li.active .header-tool{ 
+    background: rgba(255, 244, 217, 0.9)
+}
+.igogotalk .h-tool .tool-pencil-extend ul li, .igogotalk .h-tool .tool-text-extend ul li, .igogotalk .h-tool .tool-shape-extend ul li{
+    border-bottom: 0.01rem solid #ffda7e!important;
+}
+.igogotalk .header-tool-extend.tool-color-extend{
+    overflow: initial;
+}
+.igogotalk .h-tool li .header-tool-extend{
+    width: 1.8rem;
+    left: 100%!important;
+    display: block!important;
+
+    background-size: 100% 100%;
+
+    opacity: 1!important;
+
+    background: #fdeabb;
+    border-radius: 0.15rem;
+    border:1px solid #ffda7e;
+}
+.igogotalk .h-tool li button{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: -0.1rem;
+}
+.igogotalk .h-tool li .header-tool-extend .h-tool-measure{
+
+    margin: 0.1rem 0.1rem 0 0;    
+}
+.igogotalk .clear-float:after,.igogotalk .clear-float:before{
+    visibility: initial!important;
+}
+
+.igogotalk .h-tool li .header-tool-extend:before{
+    content:"";
+    width: 0.15rem;
+    height: 0.2rem!important;
+    display: block;
+    background-image: url('../img/gogo_img/left_bar_item_icon_sanjiao.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left:-0.15rem;
+    top:50%;
+    margin-top:-0.1rem;
+}
+.igogotalk .h-tool li .tk-tool-color-extend:after{
+    content:"";
+    width: 0.15rem;
+    height: 0.2rem;
+    display: block;
+    background-image: url('../img/gogo_img/left_bar_item_icon_sanjiao.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left:-0.15rem;
+    top:50%;
+    margin-top:-0.1rem;
+}
+.igogotalk .h-tool li .header-tool-extend .h-tool-extend-option-content{
+    overflow: hidden;
+}
+
+.igogotalk .h-tool li .header-tool-extend{
+    
 }
 .igogotalk .h-tool .tool-pencil-extend ul,.igogotalk .h-tool  .tool-text-extend,.igogotalk .h-tool .tool-shape-extend ul{
-    background: red;
+    border-radius: 0.15rem;
 }
 
 .igogotalk .startdetection .net-testing{
@@ -347,6 +422,27 @@
 .igogotalk .curtom-select .select_option li.selected{
     background-color: #e6e8ee!important;
     color: #3278fe!important;
+}
+/* 小工具图标 */
+.h-tool .tool-pencil-extend ul li:nth-of-type(1) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+    background-image: url('../img/gogo_img/icon_item/left_draw_item_qianbi.png')!important;
+    background-size: 50%;
+
+}
+.h-tool .tool-pencil-extend ul li:nth-of-type(2) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+    background-image: url('../img/gogo_img/icon_item/left_draw_item_yingguangbi.png')!important;
+    background-size: 50%;
+
+}
+.h-tool .tool-pencil-extend ul li:nth-of-type(3) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+    background-image: url('../img/gogo_img/icon_item/left_draw_item_xiantiao.png')!important;
+    background-size: 50%;
+
+}
+.h-tool .tool-pencil-extend ul li:nth-of-type(4) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+    background-image: url('../img/gogo_img/icon_item/left_draw_item_jiantou.png')!important;
+    background-size: 50%;
+
 }
 /* icon start*/
 .igogotalk .h-tool{
