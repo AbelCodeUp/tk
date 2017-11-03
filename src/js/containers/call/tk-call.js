@@ -81,7 +81,7 @@ class TkCall extends React.Component{
     //处理gogotalk自定义组件 springfeng
     switchGogotalk(){ 
         // alert(TkConstant.joinRoomInfo.roomtype);
-        if(TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype != TkConstant.ROOMTYPE.oneToOne ){
+        if(TkGlobal.format == "gogotalk" && TkConstant.joinRoomInfo.roomtype != TkConstant.ROOMTYPE.oneToOne ){
           return  <MainVesselSmart_gogotalk />; 
         }else{
             return  <MainVesselSmart />;

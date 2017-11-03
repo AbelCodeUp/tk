@@ -11,7 +11,7 @@ import './css/mediaAudioPlayer.css';
 import './css/cssGiftAnimation.css';
 import './css/h5Document.css';
 import './css/icoachu.css';
-import './css/igogotalk.css';
+import './css/gogotalk.css';
 
 //引入组件
 import "./js/utils/extend/jqueryGlobal" ;
