@@ -44,4 +44,3 @@ class LeftToolBarVesselSmart extends React.Component {
     };
 };
 export default LeftToolBarVesselSmart;
-
