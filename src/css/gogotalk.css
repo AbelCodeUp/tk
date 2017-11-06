@@ -212,23 +212,61 @@
 .gogotalk .user-sended{
 	border-radius: 0;
 }
+/* 聊天框 springfeng */
+.gogotalk #chatbox{
+    width: 3rem;
+    margin: 0 1rem;
+    border: 3px solid #ec40b6;
+    border-radius: 0.1rem;
+}
+
+/* 聊天记录剩余条数 springfeng */
+.gogotalk .chatmsg{
+    position: relative;
+    margin-top: 25px;
+    
+}
+
+.gogotalk .msgCount{
+    top: -0.1rem;
+    left: 0.8rem;
+    width: 30px;
+    height: 30px;  
+    position:absolute;
+    background-color:red;      
+    border-radius: 50%;      
+    -moz-border-radius: 50%;      
+    -webkit-border-radius: 50%;
+    z-index: 1000;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* 聊天发送按钮行 springfeng */
 .gogotalk .input-box,.gogotalk .chat-subject{
     /* height: 0.44rem; */
-    height: 1.6rem;
+    height: 0.5rem;
+    
+    /* position:relative;color:#000;border:1px solid #000;width:500px;height:400px */
 }
 .gogotalk .chat-input{
-	margin-left: 0;
+    margin-left: 0;
+    border-top: 3px solid #ec40b6;
 }
+/* 发送按钮 springfeng */
 .gogotalk .sendBtn{
 	margin-right: 0;
-	background-color: #3578FC!important;
-	border-radius: 0.03rem;
+    background: url('../img/gogo_img/纸飞机.png') 50% 50% no-repeat #e50540 !important;
+    border-radius: 0.1rem;
+    color:transparent;
 }
+/* 聊天文本框 springfeng */
 .gogotalk .input{
 	line-height: 0.24rem;
 	border-radius:0.03rem;
 	padding: 0.1rem;
-	width: 96%;
+	width: 100%;
 	border: 0.01rem solid #DCDCDC;
 }
 /*左侧列表*/
@@ -287,8 +325,9 @@
     /* background: #1250c4; */
 }
 
+/* 播放栏 springfeng */
 .gogotalk  .header-left-page-time-container{
-    /* background-color: #3278fe; */
+    background-color: #ef5d3a;
 }
 .gogotalk .lc-container , .gogotalk .lc-container .lc-full-vessel{
     background-color:transparent;

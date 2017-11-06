@@ -8,7 +8,7 @@
 'use strict';
 import React from 'react';
 import LeftVesselSmart_gogotalk from './leftVessel/leftVessel_gogotalk';
-import RightVesselSmart from './rightVessel/rightVessel';
+import RightVesselSmart_gogotalk from './rightVessel/rightVessel_gogotalk';
 
 class MainVesselSmart_gogotalk extends React.Component{
     constructor(props){
@@ -21,12 +21,13 @@ class MainVesselSmart_gogotalk extends React.Component{
 
     };
     render(){
+        
         let that = this ;
         return (
             <section className="main-content-wrap clear-float" id="main">
             {/*主体内容*/}
                 <LeftVesselSmart_gogotalk />
-                <RightVesselSmart />
+                <RightVesselSmart_gogotalk />
             </section>
         )
     };
