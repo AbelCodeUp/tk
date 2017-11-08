@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import TkGlobal from 'TkGlobal';
 import CoreController from 'CoreController';
-import Input from './subpage/input';
+import Input from './subpage/gogotalkInput';
 import eventObjectDefine from 'eventObjectDefine';
 import md5 from 'js-md5';
 import sRoom from 'ServiceRoom';
@@ -21,7 +21,8 @@ class ChatBox extends Component{
 			chatList:[],
 			quizList:[],
 			role:true ,//是否是巡课或者回放者,默认框不显示
-			isBroadcast:TkGlobal.isBroadcast
+			isBroadcast:TkGlobal.isBroadcast,
+			isShowChat: false, //是否显示输入内容框
 		};
 		this.property = {
 			publishState:0,
@@ -439,7 +440,14 @@ class ChatBox extends Component{
             chatList:[],
             quizList:[],
         });
-    };
+	};
+	// 改变显示状态 gogotalk
+	_isShowChatBox() {
+		// let chatbox = this.state.isShowChat = !this.state.isShowChat;
+		this.setState({
+			isShowChat : true
+		})
+	}
 	render(){
         const that = this;
 		let tabs=[
@@ -453,9 +461,11 @@ class ChatBox extends Component{
 				}
 		]
 		let state=this.state.index;
+
+		let chatbox = {opacity: this.state.isShowChat ? '1':'0'};
 		
 		return(
-			<div id={this.props.id} className={TkGlobal.playback?"playback":""} style={{position:'relative' , height:'calc(100% - '+this.props.videoContainerHeightRem+'rem - 0.2rem)' }}   >
+			<div id={this.props.id} className={TkGlobal.playback?"playback":""}   >
 
 				<div className="options-wrap" style={{display:this.state.isBroadcast?"block":"none"}}>
 					<ul className="options" onClick={this.optionTap.bind(this)}>
@@ -479,11 +489,11 @@ class ChatBox extends Component{
 						}
 					</ul>
 				</div>
-				<div className="content-wrap" style={{height:this.state.isBroadcast?'calc(100% - 0.4rem)':'100%'}}>
+				<div className="content-wrap gogotalk_warp">
 					<section className="chat-part" style={{display:this.state.index=='0'?'block':'none'}}>
 						<div style={{height:'100%'}}>
 
-							<ul className="chat-list custom-scroll-bar">
+							<ul className="chat-list custom-scroll-bar" style={chatbox}>
 							{
 								this.state.chatList.map(function(value,index){
 									if(value.id){
@@ -514,7 +524,7 @@ class ChatBox extends Component{
 							
 							</ul>
 							<div className="input-box" style={{display:this.state.role?'none':'inline-block'}}>								
-								<Input id="talk"/>
+								<Input id="talk" isShowChat={this._isShowChatBox.bind(this)}/>
 							</div>
 						</div>
 					</section>

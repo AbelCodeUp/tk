@@ -184,7 +184,24 @@
 }
 .igogotalk .chat-list{
 	padding-top: 0.1rem;
-	padding-bottom: 0.44rem;
+    padding-bottom: 0.44rem;
+    border-top: 3px solid #e50540;
+    border-left: 3px solid #e50540;
+    border-right: 3px solid #e50540;
+    height: 4rem;
+    overflow: scroll;
+    background: #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.igogotalk .chat-part>div{
+    /* padding: 6px; */
+    width: 94%;
+    margin: 0 auto;
+    /* border: 3px solid #e50540; */
+}
+.igogotalk .gogotalk_warp{
+    height: calc(0.44rem+6px);
 }
 .igogotalk .chat-list .notice{
     margin: 0 auto 0.1rem;
@@ -212,24 +229,50 @@
 .igogotalk .user-sended{
 	border-radius: 0;
 }
-.igogotalk .input-box,.igogotalk .chat-subject{
-    /* height: 0.44rem; */
-    height: 1.6rem;
+.igogotalk .input-box{
+    border:3px solid #e50540;
+    box-sizing: border-box;
+    height: calc(0.44rem + 6px);
+    width: 93.2%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+.igogotalk .chat-subject{
+    height: 0.44rem;
+    /* height: 1.6rem; */
+    
+}
+.igogotalk #chatbox{
+    background-image:url('../img/gogo_img/icon_bg_bingkuai.png') ;
+    background-size:100% 100%;
+    background-color: transparent!important; 
+
+    position: absolute;
+    left: 0.25rem;
+    bottom: 1.5rem;
+    z-index: 999999999;
+
+    padding-bottom: 0.6rem;
+    padding-top: 0.1rem;
 }
 .igogotalk .chat-input{
 	margin-left: 0;
 }
 .igogotalk .sendBtn{
 	margin-right: 0;
-	background-color: #3578FC!important;
-	border-radius: 0.03rem;
+    background-image: url('../img/gogo_img/icon_zhifeiji.png')!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-size: 44%!important;
+	/* border-radius: 0.03rem; */
 }
 .igogotalk .input{
 	line-height: 0.24rem;
-	border-radius:0.03rem;
+	/* border-radius:0.03rem; */
 	padding: 0.1rem;
-	width: 96%;
-	border: 0.01rem solid #DCDCDC;
+	width: 100%;
+	/* border: 0.01rem solid #DCDCDC; */
 }
 /*左侧列表*/
 .igogotalk .tk-app-list .tk-list-item,.igogotalk .tk-app-list .tk-app-list-title{
@@ -247,8 +290,11 @@
 	background: #EDEEF2;
 }
 .igogotalk .video-container .video-participants-vessel{
-    width: 3rem;
-    margin: 0 1rem;
+    width: 3.3rem;
+    /* margin: 0 1rem; */
+}
+.igogotalk .video-container{
+    padding: 0 0.5rem;
 }
 /* .igogotalk .video-container .video-permission-container{
     background: #fff;
