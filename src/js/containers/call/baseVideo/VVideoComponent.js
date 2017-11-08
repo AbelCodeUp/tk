@@ -527,6 +527,8 @@ class VVideoComponent extends React.Component{
             <div id={'video_container_'+this.props.stream.extensionId} className={this.props.classCss}  onDoubleClick={that.props.handlerOnDoubleClick.bind(that) } > {/*老师类名:video-chairman-wrap*/}
                 <div data-video="false"  className="video-permission-container add-position-relative clear-float">
                     <div  className="video-wrap  participant-right video-participant-wrap add-position-relative" >
+                        <div className="igogo_img_video"></div>
+                        <div className="igogo_img_video_two"></div>
                         {this.props.stream.getID()>0 || this.props.stream.getID()=='local'?<Video stream={this.props.stream} classCss={this.state.classCss} ></Video>:undefined }
                         <div className="v-name-wrap clear-float other-name " >
                             <span className="v-name add-nowrap add-fl"  >{userNickName}</span>

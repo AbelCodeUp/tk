@@ -175,9 +175,10 @@ class RightContentVesselSmart extends React.Component{
                     { (!TkGlobal.playback && loadTimeRemindSmart ) ? <TimeRemindSmart roomConnected={loadTimeRemindSmart} /> : undefined  } {/*提示信息*/}
                      <Video />   {/*视频悬浮窗口*/}
                      <PagingToolBarSmart id="page_wrap" {...that.state.page_wrap} /> {/*白板以及动态ppt下面工具条*/}
-                    { 0 ? <WhiteboardToolAndControlOverallBarSmart id="lc_tool_container" {...that.state.lc_tool_container}/> : undefined }白板工具栏以及全体操作功能栏
+                    { 0 ? <WhiteboardToolAndControlOverallBarSmart id="lc_tool_container" {...that.state.lc_tool_container}/> : undefined }{/*白板工具栏以及全体操作功能栏*/}
                 </div>
             </article>
+            // gogotalk
         )
     };
 };

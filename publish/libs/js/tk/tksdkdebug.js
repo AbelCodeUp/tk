@@ -5680,15 +5680,15 @@ TK.VideoPlayer = function (spec) {
     }
 
     // teacher
-    that.video_img = document.createElement('div');
-    that.video_img.className = 'igogo_img_video';
+    // that.video_img = document.createElement('div');
+    // that.video_img.className = 'igogo_img_video';
 
-    that.video_img_2 = document.createElement('div');
-    that.video_img_2.className = 'igogo_img_video_two';
+    // that.video_img_2 = document.createElement('div');
+    // that.video_img_2.className = 'igogo_img_video_two';
 
 
-    that.div.appendChild(that.video_img);
-    that.div.appendChild(that.video_img_2);
+    // that.div.appendChild(that.video_img);
+    // that.div.appendChild(that.video_img_2);
     that.div.appendChild(that.video);
 
     that.containerWidth = 0;
