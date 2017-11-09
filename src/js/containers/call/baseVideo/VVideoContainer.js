@@ -16,6 +16,7 @@ import TkConstant from "../../../tk_class/TkConstant";
 import eventObjectDefine from 'eventObjectDefine';
 import  './css/cssVVideoContainer.css';
 import VVideoComponent from "./VVideoComponent";
+import VVideoComponentGoGoTalk from './VVideoComponent_gogotalk';
 
 class VVideoContainer extends React.Component{
     constructor(props){
@@ -439,8 +440,14 @@ class VVideoContainer extends React.Component{
 
                 }
             }
+            let _video = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne 
+                ?
+                <VVideoComponentGoGoTalk  handlerOnDoubleClick={that.handlerOnDoubleClick.bind(that , stream)}  key={stream.getID()} stream={stream}  classCss={userid==teacherId?teacherCss:studentCss} showGift={showGift} giftnumber={giftnumber}  receiveStreamCompleteCallback={that.receiveStreamComplete.bind(that)}  ></VVideoComponentGoGoTalk>
+
+                : <VVideoComponent  handlerOnDoubleClick={that.handlerOnDoubleClick.bind(that , stream)}  key={stream.getID()} stream={stream}  classCss={userid==teacherId?teacherCss:studentCss} showGift={showGift} giftnumber={giftnumber}  receiveStreamCompleteCallback={that.receiveStreamComplete.bind(that)}  ></VVideoComponent>
+                
             vVideoComponentArray.push(
-                <VVideoComponent  handlerOnDoubleClick={that.handlerOnDoubleClick.bind(that , stream)}  key={stream.getID()} stream={stream}  classCss={userid==teacherId?teacherCss:studentCss} showGift={showGift} giftnumber={giftnumber}  receiveStreamCompleteCallback={that.receiveStreamComplete.bind(that)}  ></VVideoComponent>
+                _video
             );
         }
         return{

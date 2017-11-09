@@ -7,6 +7,7 @@
  */
 'use strict';
 import React from 'react';
+import TkUtils from 'TkUtils';
 import TkGlobal from 'TkGlobal';
 import TkConstant from 'TkConstant';
 import CoreController from 'CoreController';
@@ -130,7 +131,7 @@ class ToolExtendListVesselSmart extends React.Component{
         };
         // gogotalk
         return (
-            <article className="tool-extend-container tk-weight" id="tool_extend_container"  style={{left:open?'0':undefined}} >
+            <article className="tool-extend-container tk-weight" id="tool_extend_container"  style={{left:open?'100%':undefined}} >
                 {that.state.listLoad.tool_courseware_list?<FileListSmart show={that.state.listShow.tool_courseware_list} isMediaUI={false}  idType={that.state.tool_common_type}/>:undefined} {/* 普通文件列表*/}
                 {that.state.listLoad.tool_media_courseware_list?<FileListSmart show={that.state.listShow.tool_media_courseware_list} isMediaUI={true}   idType={that.state.tool_media_type}/>:undefined} {/* 媒体文件列表*/}
                 {that.state.listLoad.tool_user_list?<UserListSmart show={that.state.listShow.tool_user_list}  /> :undefined} {/* 用户列表*/}

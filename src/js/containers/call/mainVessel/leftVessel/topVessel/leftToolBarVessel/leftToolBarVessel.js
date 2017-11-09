@@ -8,9 +8,15 @@
 'use strict';
 import React from 'react';
 import TkGlobal from 'TkGlobal';
+import TkUtils from 'TkUtils';
+
 import ToolButtonVesselSmart from './toolButtonVessel/toolButtonVessel';
 import ToolExtendListVesselSmart from './toolExtendListVessel/toolExtendListVessel';
+import ToolExtendListVesselSmartGoGoTalk from './toolExtendListVessel/toolExtendListVessel_gogotalk';
+
 import "./css/cssLeftToolBarVessel.css";
+//gogotalk 
+import TkConstant from 'TkConstant';
 
 import ControlOverallBarSmart from '../rightContentVessel/whiteboardToolAndControlOverallBar/controlOverallBar';
 import WhiteboardToolBarSmart from '../rightContentVessel/whiteboardToolAndControlOverallBar/whiteboardToolBar';
@@ -28,18 +34,27 @@ class LeftToolBarVesselSmart extends React.Component {
 
     render() {
         let that = this;
-        return (
-            <article id="tool_container" className="tool-container add-position-relative add-fl" >{/*工具区域*/}
-                {/* <ToolButtonVesselSmart /> 工具按钮的所有组件 */}
-                <ToolExtendListVesselSmart /> {/*工具按钮对应的List列表Smart模块*/}
-                {/* gogotalk 新增11111 */}
+        let _ToolDom = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href) == TkConstant.ROOMTYPE.oneToOne
+            ?
+            <div>
                 <div className="gogotalk_leftbar_box">
-                    <div className="gogotalk_left_top_banner">
-
-                    </div>
+                    <div className="gogotalk_left_top_banner"></div>
                     <ControlOverallBarSmart />  {/*gogotalk*/}
                     <WhiteboardToolBarGogotalk />  {/*gogotalk*/}
                 </div>
+                <ToolExtendListVesselSmartGoGoTalk />
+            </div>
+            :
+            <div><ToolButtonVesselSmart /><ToolExtendListVesselSmart /></div>; //判断gogotalk与一对一加载一套样式
+        return (
+            <article id="tool_container" className="tool-container add-position-relative add-fl" >{/*工具区域*/}
+                {
+                    _ToolDom
+                }
+                {/* 工具按钮的所有组件 */}
+                {/*工具按钮对应的List列表Smart模块*/}
+                {/* gogotalk 新增11111 */}
+
             </article>
         )
     };

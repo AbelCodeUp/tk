@@ -9,6 +9,7 @@
 import React from 'react';
 import { DropTarget } from 'react-dnd';
 import TkGlobal from 'TkGlobal' ;
+import TkUtils from 'TkUtils';
 import TkConstant from 'TkConstant' ;
 import eventObjectDefine from 'eventObjectDefine';
 import CoreController from 'CoreController';
@@ -167,6 +168,19 @@ class RightContentVesselSmart extends React.Component{
         let that = this ;
         const {connectDropTarget} = that.props;
         let {loadTimeRemindSmart} = that.state ;
+        // gogotalk新增
+        let _isShowGongju = false;
+        if(TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne){
+            
+        }else{
+            if(!TkGlobal.playback){
+                _isShowGongju = true;
+            }else{
+                _isShowGongju = false;
+            }
+        }
+        
+        
         return connectDropTarget(
             <article  id="content" className="lc-container add-position-relative add-fl">
             {/*白板以及动态PPT等区域*/}
@@ -175,7 +189,8 @@ class RightContentVesselSmart extends React.Component{
                     { (!TkGlobal.playback && loadTimeRemindSmart ) ? <TimeRemindSmart roomConnected={loadTimeRemindSmart} /> : undefined  } {/*提示信息*/}
                      <Video />   {/*视频悬浮窗口*/}
                      <PagingToolBarSmart id="page_wrap" {...that.state.page_wrap} /> {/*白板以及动态ppt下面工具条*/}
-                    { 0 ? <WhiteboardToolAndControlOverallBarSmart id="lc_tool_container" {...that.state.lc_tool_container}/> : undefined }{/*白板工具栏以及全体操作功能栏*/}
+                    {/*白板工具栏以及全体操作功能栏*/}
+                    { _isShowGongju ? <WhiteboardToolAndControlOverallBarSmart id="lc_tool_container" {...that.state.lc_tool_container}/> : undefined }
                 </div>
             </article>
             // gogotalk

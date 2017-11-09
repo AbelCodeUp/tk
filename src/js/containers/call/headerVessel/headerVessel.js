@@ -9,7 +9,10 @@
 import React from 'react';
 import LeftHeaderSmart from './left/leftHeader';
 import RightHeaderSmart from './right/rightHeader';
-// gogotalk
+import TkUtils from 'TkUtils';
+import TkGlobal from 'TkGlobal';
+//gogotalk 
+import TkConstant from 'TkConstant';
 import ToolButtonVesselSmart from '../mainVessel/leftVessel/topVessel/leftToolBarVessel/toolButtonVessel/toolButtonVessel';
 
 class HeaderVesselSmart extends React.Component{
@@ -22,10 +25,12 @@ class HeaderVesselSmart extends React.Component{
     };
     render(){
         let that = this ;
+        let _ToolButtonVesselSmart = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne 
+        ?<ToolButtonVesselSmart />:'';
         return (
             <header id="header">
                 <section className="header-wrap clear-float"  id="header_container">
-                    <ToolButtonVesselSmart /> {/*工具按钮的所有组件 */}
+                     { _ToolButtonVesselSmart }{/*工具按钮的所有组件 */}
                     <LeftHeaderSmart /> {/*左侧组件*/}
                     <RightHeaderSmart />{/*右侧组件*/}
                 </section>

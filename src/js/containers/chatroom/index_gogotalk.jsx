@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import TkGlobal from 'TkGlobal';
+import TkUtils from 'TkUtils';
 import CoreController from 'CoreController';
-import Input from './subpage/gogotalkInput';
+import InputGoGoTalk from './subpage/gogotalkInput';
+import Input from './subpage/Input';
 import eventObjectDefine from 'eventObjectDefine';
 import md5 from 'js-md5';
 import sRoom from 'ServiceRoom';
@@ -476,7 +478,10 @@ class ChatBox extends Component {
 		let state = this.state.index;
 
 		let chatbox = { opacity: this.state.isShowChat ? '1' : '0', height: this.state.isShowChat ? 'auto' : '0' };
-		// gogotalk
+        // gogotalk新增dom
+        let _Dom = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == rename.ROOMTYPE.oneToOne 
+        ?<InputGoGoTalk id="talk" isShowChat={this._isShowChatBox.bind(this)} />:<Input id="talk" isShowChat={this._isShowChatBox.bind(this)} />;
+
 		return (
 			<div id={this.props.id} className={TkGlobal.playback ? "playback" : ""}   >
 
@@ -541,7 +546,8 @@ class ChatBox extends Component {
 							</div>
 							<div className="input-box" style={{ display: this.state.role ? 'none' : 'inline-block' }}>
 								<div className="chatNum">{this.state.gogotalkChatUnread }</div>
-								<Input id="talk" isShowChat={this._isShowChatBox.bind(this)} />
+                                
+								{ _Dom }
 							</div>
 						</div>
 					</section>

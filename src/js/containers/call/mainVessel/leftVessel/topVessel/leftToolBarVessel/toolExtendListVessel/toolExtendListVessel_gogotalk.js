@@ -12,6 +12,7 @@ import TkConstant from 'TkConstant';
 import CoreController from 'CoreController';
 import eventObjectDefine from 'eventObjectDefine';
 import UserListSmart from './userList/userList';
+
 import FileListSmart from './fileList/fileList';
 
 class ToolExtendListVesselSmart extends React.Component{
