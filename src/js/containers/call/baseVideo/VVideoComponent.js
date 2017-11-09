@@ -522,7 +522,7 @@ class VVideoComponent extends React.Component{
         let studentStyle = this.props.showGift?((that.props.classCss.indexOf("video-hearer-wrap")==-1)?"none":"block"):"none";
         let userNickName = that.state.userNickName;
         let studentButton = CoreController.handler.getAppPermissions('studentVframeBtnIsHide')?"none":"";
-
+        //gogotalk
         return (
             <div id={'video_container_'+this.props.stream.extensionId} className={this.props.classCss}  onDoubleClick={that.props.handlerOnDoubleClick.bind(that) } > {/*老师类名:video-chairman-wrap*/}
                 <div data-video="false"  className="video-permission-container add-position-relative clear-float">
