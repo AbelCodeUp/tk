@@ -358,6 +358,12 @@ class WhiteboardToolBarSmart extends React.Component{
                         </div>
                     </div>
                 </li>
+                <li  className="tool-li">
+                    
+                </li>
+                <li  className="tool-li"  >
+                    
+                </li>
             </ol>
             
             </FreeScrollBar>

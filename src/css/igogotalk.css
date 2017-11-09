@@ -129,7 +129,7 @@
     border-bottom:0.01rem solid #2260d4;
 }
 .igogotalk .FreeScrollbar-vertical-track {
-    right: 2.7rem!important;
+    right: 2.8rem!important;
 }
 .igogotalk .header-tool-extend-option-wrap{
     border-top:0.01rem solid #2260d4;
@@ -148,16 +148,37 @@
     /* overflow: auto; */
     /* width: 100%; */
     width: 1.3rem;
-    margin-top: -0.1rem;
 }
 .igogotalk .gogotalk_leftbar_box .gogo_leftbar_ban{
-    /* height: 6.5rem; */
+    border:0.08rem solid transparent;
+    -moz-border-image:url(../img/gogo_img/left_bar_line.png) 30 30 round;	/* Old Firefox */
+    -webkit-border-image:url(../img/gogo_img/left_bar_line.png) 30 30 round;	/* Safari and Chrome */
+    -o-border-image:url(../img/gogo_img/left_bar_line.png) 30 30 round;	/* Opera */
+    border-image:url(../img/gogo_img/left_bar_line.png) 30 30 round;
+    border-top: none;
+}
+.igogotalk .FreeScrollbar-vertical-track {
+    background: rgba(255, 255, 255, 0.7)!important;
+    border-left:none!important;
+    width: 0.1rem!important;
+}
+.igogotalk .FreeScrollbar-vertical-handler {
+    background: rgba(0,0,0,0.3)!important;
 }
 .igogotalk .gogotalk_leftbar_box ol>li{
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
     float: none;
     margin: 0 auto;
+    border-bottom: 0.1rem solid transparent;
+    -moz-border-image:url(../img/gogo_img/left_bar_hen_line.png) 30 30 round;	/* Old Firefox */
+    -webkit-border-image:url(../img/gogo_img/left_bar_hen_line.png) 30 30 round;	/* Safari and Chrome */
+    -o-border-image:url(../img/gogo_img/left_bar_hen_line.png) 30 30 round;	/* Opera */
+    border-image:url(../img/gogo_img/left_bar_hen_line.png) 30 30 round;
+
+}
+.igogotalk .header-left-page-time-container{
+    background-color: #b52324!important;
 }
 .igogotalk .gogotalk_left_top_banner{
     height: 1.3rem;
@@ -165,6 +186,7 @@
     background-size: 100% 100%;
     width: 2rem;
     margin-left: -0.3rem;
+    margin-bottom: -0.06rem;
 }
 /* .igogotalk .lc-tool-container{
     left: -2.3rem!important;
@@ -176,8 +198,48 @@
 }
 /*设备切换*/
 .igogotalk .startdetection .net-testing .device-test-header{
-	background-color: #3278fe;
+	background-color: #e50540;
 }
+.igogotalk .testing-left .testing-box .testing-option.active{
+    color: #e50540!important;
+}
+.igogotalk .fixldy .next-st{
+    background-color: #e50540!important;
+}
+.igogotalk .bg1{
+    background-image: url('../img/gogo_img/step_tea_1.png')!important;
+}
+.igogotalk .bg1.student{
+    background-image: url('../img/gogo_img/step_stu_1.png')!important;
+}
+.igogotalk .bg2{
+    background-image: url('../img/gogo_img/step_tea_2.png')!important;
+}
+.igogotalk .bg2.student{
+    background-image: url('../img/gogo_img/step_stu_2.png')!important;
+}
+.igogotalk .bg3{
+    background-image: url('../img/gogo_img/step_tea_3.png')!important;
+}
+.igogotalk .bg3.student{
+    background-image: url('../img/gogo_img/step_stu_3.png')!important;
+}
+.igogotalk .bg4{
+    background-image: url('../img/gogo_img/step_tea_4.png')!important;
+}
+.igogotalk .bg4.student{
+    background-image: url('../img/gogo_img/step_stu_4.png')!important;
+}
+.igogotalk .bg5{
+    background-image: url('../img/gogo_img/step_tea_5.png')!important;
+}
+.igogotalk .bg6{
+    background-image: url('../img/gogo_img/step_tea_6.png')!important;
+}
+.igogotalk .bg7{
+    background-image: url('../img/gogo_img/step_tea_7.png')!important;
+}
+
 /*右下角*/
 .igogotalk .chatbox,.igogotalk .chatbox .input-box{
 	background-color: #E5E7ED;
@@ -260,7 +322,7 @@
 }
 .igogotalk .input-box{
     box-sizing: border-box;
-    height: 0.92rem;
+    height: 1.1rem;
     width: 94%;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -275,6 +337,7 @@
 .igogotalk .chat-subject{
     height: 0.5rem;
     border:3px solid #e50540;
+    margin-top: 0.1rem;
     /* height: 1.6rem; */
     
 }
@@ -355,13 +418,15 @@
 }
 /*左侧列表*/
 .igogotalk .tk-app-list .tk-list-item,.igogotalk .tk-app-list .tk-app-list-title{
-	border-color: #3578FC;
+	border-color: #b52324;
 }
 .igogotalk .tk-list .tk-list-item.active{
-	background-color: #3578FC;
+    background-color: #d83a3a;
+    padding-right: 0!important;
+    color:#fff;
 }
 .igogotalk div.tk-app-list-title{
-    background: #023696;
+    background: #b52324;
 }
 
 /*底部视频*/
@@ -410,9 +475,14 @@
     /* background-color:#1250c4; */
 }
 .igogotalk  .tool-extend-container, .igogotalk  .tool-extend-container .tool-extend{
-    /* background: #1250c4; */
+    background: #fff8f9;
 }
-
+.igogotalk .tool-extend .tk-app-list-button-container .upload-btn{
+    background-color: #e50540;
+}
+.igogotalk .tool-extend-container{
+    z-index: 9999!important;
+}
 .igogotalk  .header-left-page-time-container{
     /* background-color: #3278fe; */
 }
@@ -478,9 +548,8 @@
     border:1px solid #ffda7e;
 }
 .igogotalk .h-tool li button{
-    width: 1.2rem;
-    height: 1.2rem;
-    margin-left: -0.1rem;
+    width: 1rem;
+    height: 1rem;
 }
 .igogotalk .h-tool li .header-tool-extend .h-tool-measure{
 
@@ -618,7 +687,11 @@
     background-size: 50% 50%;
 }
 .igogotalk .h-tool li.tl-clear .header-tool.disabled  .tool-img-wrap{
-    background: url('../img/gogo_img/icon_shanchu.png') no-repeat center!important;
+    background-image: url('../img/gogo_img/icon_delete.png')!important;
+    background-size: 50% 50%;
+}
+.igogotalk .h-tool li.tl-clear .tool-img-wrap{
+    background-image: url('../img/gogo_img/icon_delete.png')!important;
     background-size: 50% 50%;
 }
 .igogotalk .h-tool li .tool-img-wrap .tool_triangle{
@@ -755,15 +828,20 @@
 .igogotalk .h-tool li.tl-shape .tool-img-wrap:hover {
     background-image: url(../img/call_layout/top/tools/icon_shape_hover.png);
 }
-.igogotalk .h-tool li.tl-undo .tool-img-wrap:hover {
-    background-image: url(../img/call_layout/top/tools/icon_revoked_hover.png);
+.igogotalk .h-tool li.tl-undo .tool-img-wrap{
+    background-image: url(../img/gogo_img/left_bar_chexiao.png);
+    background-size: 50% 50%;
 }
-.igogotalk .h-tool li.tl-redo .tool-img-wrap:hover {
-    background-image: url(../img/call_layout/top/tools/icon_recover_hover.png);
+.igogotalk .h-tool li.tl-redo .tool-img-wrap {
+    background-image: url(../img/gogo_img/left_bar_huifu.png);
+    background-size: 50% 50%;
 }
-.igogotalk .h-tool li.tl-eraser .tool-img-wrap:hover {
-    background-image: url(../img/call_layout/top/tools/icon_eraser_hover.png);
+
+.igogotalk .h-tool li.tl-eraser .tool-img-wrap{
+    background-image: url(../img/gogo_img/left_bar_xiangpi.png);
+    background-size: 50% 50%;
 }
+
 .igogotalk .h-page-next-prev-container button.lc-add-page:hover {
     background-image: url(../img/call_layout/lc/pages/icon_pages_right_hover.png);
 }
@@ -788,7 +866,10 @@
     background-image: url(../img/call_layout/lc/pages/icon_full_screen_hover.png);
 }
 .igogotalk .h-btn-wrap button.disabled {
-    opacity: 0.4;
+    opacity: 0.6;
+}
+.igogotalk .h-btn-wrap button.h-room-raise{
+    background: #fff!important;
 }
 
 .igogotalk .h-logo-wrap{
