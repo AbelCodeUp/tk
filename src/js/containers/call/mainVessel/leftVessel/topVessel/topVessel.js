@@ -15,6 +15,9 @@ import RightContentVesselSmart from './rightContentVessel/rightContentVessel';
 class TopVesselSmart extends React.Component{
     constructor(props){
         super(props);
+        this.state={
+            dataA:2
+        }
     };
     componentDidMount() { //在完成首次渲染之前调用，此时仍可以修改组件的state
     };
@@ -24,14 +27,19 @@ class TopVesselSmart extends React.Component{
         eventObjectDefine.CoreController.dispatchEvent({type:"resizeHandler"});
         eventObjectDefine.CoreController.dispatchEvent({type:"resizeMediaVideoHandler"});
     }
+    _chageData() {
+        this.setState({
+            dataA : 1
+        })
+    }
     render(){
         let that = this ;
         let {bottomVesselSmartHeightRem} = that.props;
         return (
             <section className="add-fl clear-float tool-and-literally-wrap add-position-relative" id="main_tool_literally"  style={{height:'calc(100% - '+bottomVesselSmartHeightRem+'rem)'}} >
                 {/*工具 !TkGlobal.playback、白板区域*/}
-                { true ? <LeftToolBarVesselSmart /> : undefined }
-                <RightContentVesselSmart />
+                { !TkGlobal.playback ? <LeftToolBarVesselSmart data={this.state.dataA} /> : undefined }
+                <RightContentVesselSmart onDataChange={this._chageData.bind(this)} />
             </section>
         )
     };

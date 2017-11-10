@@ -115,7 +115,10 @@
     margin-right: 0.1rem;
 }
 /* end */
-.igogotalk .lc-drawing canvas{
+.igogotalk .gogoleftbar{
+    height: calc(100% - 2.2rem)!important;
+}
+.igogotalk .lc-drawing canvas:last-of-type(1){
     background: #fff!important;
     width: 96.4%!important;
     height: 95%!important;
@@ -124,6 +127,7 @@
     bottom: 0.2rem!important;
     right: 0.2rem!important;
     border-radius: 0.2rem;
+    border: 3px solid #b63839;
 }
 .igogotalk .h-tool .tool-pencil-extend ul li,.igogotalk .h-tool .tool-text-extend ul li,.igogotalk .h-tool .tool-shape-extend ul li{
     border-bottom:0.01rem solid #2260d4;
@@ -143,6 +147,7 @@
 .igogotalk .gogotalk_leftbar_box{
     width:1.3rem;
     margin: 0 auto;
+    height: 100%;
 }
 .igogotalk .gogotalk_leftbar_box ol{
     /* overflow: auto; */
@@ -503,6 +508,7 @@
 }
 .igogotalk .lc-container , .igogotalk .lc-container .lc-full-vessel{
     background-color:transparent;
+    z-index: 2;
     /* position: relative; */
 }
 .igogotalk .video-container{

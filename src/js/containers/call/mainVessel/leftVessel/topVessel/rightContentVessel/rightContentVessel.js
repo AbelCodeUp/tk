@@ -182,7 +182,7 @@ class RightContentVesselSmart extends React.Component{
         
         
         return connectDropTarget(
-            <article  id="content" className="lc-container add-position-relative add-fl">
+            <article  id="content" onClick={this.props.onDataChange} className="lc-container add-position-relative add-fl">
             {/*白板以及动态PPT等区域*/}
                 <div   id="lc-full-vessel" className="add-position-relative lc-full-vessel" >
                     <WhiteboardAndNewpptSmart /> {/*白板以及动态PPT组件*/}

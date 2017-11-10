@@ -145,13 +145,13 @@ class WhiteboardToolBarSmart extends React.Component {
     /*所有li的鼠标移出事件处理*/
     allLiMouseLeave(elementId) {
         $('.FreeScrollbar-vertical-track').css('zIndex', 0);
-        window.setTimeout(() => {
+        // window.setTimeout(() => {
 
             $("#" + elementId).removeClass('more');
             if (elementId === 'whiteboard_tool_vessel_color_strokesize') {
                 $("#" + elementId).removeClass('active');
             }
-        }, 500)
+        // }, 500)
     };
 
     /*改变大小的点击事件*/
@@ -231,6 +231,9 @@ class WhiteboardToolBarSmart extends React.Component {
         this.setState({ show: show });
     };
 
+    // gogo新增点击图标改变父组件层级
+    
+
     render() {
         let that = this;
         let { smipleColorElementArray, moreColorElementArray } = that._loadSmipleAndMoreListToArray(that.colors.smipleList, that.colors.moreList);
@@ -241,12 +244,14 @@ class WhiteboardToolBarSmart extends React.Component {
             {display:'block'}
             :
             {display:'none'};
+        //新增条件学生画笔是否可点击
+        let isClick = !this.state.show ? { pointerEvents:'none' }:{};
 
         return (
             // gogotalk
-            <div style={{ width: '4rem', height: '400px', position: 'relative', zIndex: '999' }}>
+            <div className="gogoleftbar" onClick={this.props.incallback} style={{ width: '4rem', position: 'relative', zIndex: '999' }}>
                 <FreeScrollBar style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
-                    <ol className="add-fl gogo_leftbar_ban clear-float h-tool" id="header_tool_vessel" style={{ display: !that.state.show ? 'none' : '' }}  > {/*白板工具栏*/}
+                    <ol className="add-fl gogo_leftbar_ban clear-float h-tool" id="header_tool_vessel" style={isClick}  > {/*白板工具栏*/}
                         <li className="tool-li tl-mouse" id="whiteboard_tool_vessel_mouse" style={{ display: !mouse ? 'none' : undefined }} >
                             <button className="header-tool" title={TkGlobal.language.languageData.header.tool.mouse.title} id="tool_mouse" onClick={that.allLiClick.bind(that, 'whiteboard_tool_vessel_mouse', true, false, true)}  >
                                 <span className="tool-img-wrap"></span>
