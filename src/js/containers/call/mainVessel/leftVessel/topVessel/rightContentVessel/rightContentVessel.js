@@ -170,7 +170,7 @@ class RightContentVesselSmart extends React.Component{
         let {loadTimeRemindSmart} = that.state ;
         // gogotalk新增
         let _isShowGongju = false;
-        if(TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne){
+        if(TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne){
             
         }else{
             if(!TkGlobal.playback){

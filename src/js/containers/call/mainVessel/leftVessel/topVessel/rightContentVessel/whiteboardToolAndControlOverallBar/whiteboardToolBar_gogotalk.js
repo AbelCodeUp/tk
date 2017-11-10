@@ -236,7 +236,7 @@ class WhiteboardToolBarSmart extends React.Component {
         let { smipleColorElementArray, moreColorElementArray } = that._loadSmipleAndMoreListToArray(that.colors.smipleList, that.colors.moreList);
         let { mouse, laser, brush, text, shape, undo, redo, eraser, clear, colorAndSize } = that.state.showItemJson;
         // gogotalk新增样式
-        let _gogoDom = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href) == TkConstant.ROOMTYPE.oneToOne
+        let _gogoDom = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne
             ?
             {display:'block'}
             :

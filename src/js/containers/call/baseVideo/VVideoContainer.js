@@ -440,7 +440,7 @@ class VVideoContainer extends React.Component{
 
                 }
             }
-            let _video = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne 
+            let _video = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne 
                 ?
                 <VVideoComponentGoGoTalk  handlerOnDoubleClick={that.handlerOnDoubleClick.bind(that , stream)}  key={stream.getID()} stream={stream}  classCss={userid==teacherId?teacherCss:studentCss} showGift={showGift} giftnumber={giftnumber}  receiveStreamCompleteCallback={that.receiveStreamComplete.bind(that)}  ></VVideoComponentGoGoTalk>
 

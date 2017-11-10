@@ -34,7 +34,8 @@ class LeftToolBarVesselSmart extends React.Component {
 
     render() {
         let that = this;
-        let _ToolDom = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href) == TkConstant.ROOMTYPE.oneToOne
+        // alert(TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne)
+        let _ToolDom = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne
             ?
             <div>
                 <div className="gogotalk_leftbar_box">

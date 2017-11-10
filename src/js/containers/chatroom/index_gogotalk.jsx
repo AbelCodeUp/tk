@@ -479,7 +479,7 @@ class ChatBox extends Component {
 
 		let chatbox = { opacity: this.state.isShowChat ? '1' : '0', height: this.state.isShowChat ? 'auto' : '0' };
         // gogotalk新增dom
-        let _Dom = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == rename.ROOMTYPE.oneToOne 
+        let _Dom = TkGlobal.format == "igogotalk" && rename.joinRoomInfo.roomtype == rename.ROOMTYPE.oneToOne 
         ?<InputGoGoTalk id="talk" isShowChat={this._isShowChatBox.bind(this)} />:<Input id="talk" isShowChat={this._isShowChatBox.bind(this)} />;
 
 		return (

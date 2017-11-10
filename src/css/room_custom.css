@@ -39,8 +39,8 @@ li.disabled , span.disabled , .t-ul-option-wrap.disabled , .translate.disabled ,
 }
 
 .lc-tool-container{
-	/* width: 0.5rem; */
-	/*height: 100%;*/
+	width: 0.5rem;
+	/* height: 100%; */
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -96,7 +96,7 @@ li.disabled , span.disabled , .t-ul-option-wrap.disabled , .translate.disabled ,
 	 background-image:url("../img/call_layout/top/tools/icon_cursor_normal.png");
 }
 .h-tool li.tl-pencil .tool-img-wrap{
-	 background-image:url("../img/icon/icon1.png");
+	 background-image:url("../img/call_layout/top/tools/icon_pencil_normal.png");
 }
 .h-tool li.tl-text .tool-img-wrap{
 	 background-image:url("../img/call_layout/top/tools/icon_fonts_normal.png");

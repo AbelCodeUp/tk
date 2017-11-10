@@ -109,7 +109,8 @@ class RightVesselSmart extends React.Component {
         let that = this;
         let { videoComponent } = this._loadVideoComponent();
         // gogotalk新增dom
-        let _GogoDom = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href) == TkConstant.ROOMTYPE.oneToOne
+        //console.error(TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne);
+        let _GogoDom = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne
             ?
             <ChatBoxGoGoTalk id={'chatbox'} videoContainerHeightRem={this.state.videoContainerHeightRem} />
             :

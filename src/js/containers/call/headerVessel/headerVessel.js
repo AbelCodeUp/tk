@@ -25,7 +25,7 @@ class HeaderVesselSmart extends React.Component{
     };
     render(){
         let that = this ;
-        let _ToolButtonVesselSmart = TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne 
+        let _ToolButtonVesselSmart = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne 
         ?<ToolButtonVesselSmart />:'';
         return (
             <header id="header">
