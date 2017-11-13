@@ -33,7 +33,8 @@ class WhiteboardToolBarSmart extends React.Component {
                 eraser: true,
                 clear: true,
                 colorAndSize: true
-            }
+            },
+            dZindex:0
         };
         this.colors = {
             smipleList: ["#000000", "#2d2d2d", "#5b5b5b", "#8e8e8e", "#c5c5c5", "#ffffff", "#ff0001", "#06ff02", "#0009ff", "#ffff03", "#00ffff", "#ff03ff"],
@@ -152,6 +153,7 @@ class WhiteboardToolBarSmart extends React.Component {
                 $("#" + elementId).removeClass('active');
             }
         // }, 500)
+        this.props.outcallback();
     };
 
     /*改变大小的点击事件*/

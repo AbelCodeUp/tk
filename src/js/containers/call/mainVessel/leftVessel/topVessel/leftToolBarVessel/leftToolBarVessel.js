@@ -24,10 +24,9 @@ import WhiteboardToolBarGogotalk from '../rightContentVessel/whiteboardToolAndCo
 
 class LeftToolBarVesselSmart extends React.Component {
     constructor(props) {
-        console.log(props);
         super(props);
         this.state = {
-            isZindex : this.props.data
+            isZindex : props.data
         }
     };
     componentDidMount() { //在完成首次渲染之前调用，此时仍可以修改组件的state
@@ -60,7 +59,7 @@ class LeftToolBarVesselSmart extends React.Component {
                     <ControlOverallBarSmart />  {/*gogotalk*/}
                     <WhiteboardToolBarGogotalk incallback={this._infouse.bind(this)} outcallback={this._inblur.bind(this)}/>  {/*gogotalk*/}
                 </div>
-                <ToolExtendListVesselSmartGoGoTalk />
+                <ToolExtendListVesselSmartGoGoTalk incallback={this._infouse.bind(this)} outcallback={this._inblur.bind(this)} />
             </div>
             :
             <div><ToolButtonVesselSmart /><ToolExtendListVesselSmart /></div>; //判断gogotalk与一对一加载一套样式

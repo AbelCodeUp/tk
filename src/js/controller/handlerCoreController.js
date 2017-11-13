@@ -34,7 +34,6 @@ class HandlerCoreController {
         // alert(TkUtils.getUrlParams('roomtype', window.location.href ));
         //gogotalk 增加一对一 样式判断
         if(TkGlobal.format == "igogotalk" && TkUtils.getUrlParams('roomtype', window.location.href ) == TkConstant.ROOMTYPE.oneToOne ){
-            // alert(1);
             //gogotalk 增加一对一 样式判断
             $(document.body).removeClass("normal igogotalk").addClass(TkGlobal.format).attr("data-company" , TkGlobal.format );
         }else{

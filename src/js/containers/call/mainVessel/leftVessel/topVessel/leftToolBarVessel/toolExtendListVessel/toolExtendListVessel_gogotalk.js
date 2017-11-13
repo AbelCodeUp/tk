@@ -31,6 +31,7 @@ class ToolExtendListVesselSmart extends React.Component{
            },
             tool_common_type: "common",
             tool_media_type:"media",
+            incallback: props.incallback
         };
         this.listernerBackupid = new Date().getTime()+'_'+Math.random();
     };
@@ -129,6 +130,10 @@ class ToolExtendListVesselSmart extends React.Component{
                 break ;
             }
         };
+        if(open){
+            setTimeout(()=>this.props.incallback())
+            
+        }
         // gogotalk
         return (
             <article className="tool-extend-container tk-weight" id="tool_extend_container"  style={{left:open?'0':undefined}} >

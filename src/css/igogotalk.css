@@ -363,7 +363,7 @@
     width: 94%;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    background-image: url('../img/gogo_img/icon_bg_send_buttom.png');
+    background:transparent url('../img/gogo_img/icon_bg_send_buttom.png');
     background-size: 100% 100%;
 
     padding: 0 0.1rem;
@@ -389,12 +389,16 @@
     border-radius: 0.1rem;
     border-top-left-radius: 0;
 }
+.FreeScrollbar-container{
+    right: -17px!important;
+    bottom: -17px!important;
+}
 .igogotalk .chatNum{
     width: 0.28rem;
     height: 0.28rem;
     background: #e50540;
     text-align: center;
-    line-height: 1.5;
+    line-height: 0.28rem;
     color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -426,7 +430,7 @@
     height: 0.3rem;
     border:1px solid #e50540;
     text-align: center;
-    line-height: 1.5;
+    line-height: 0.3rem;
     background: #fff;
     position: absolute;
     right: 0.1rem;
@@ -512,7 +516,7 @@
     /* background-color:#1250c4; */
 }
 .igogotalk  .tool-extend-container, .igogotalk  .tool-extend-container .tool-extend{
-    background: #fff8f9;
+    background: #011d1f;
 }
 .igogotalk .tool-extend .tk-app-list-button-container .upload-btn{
     background-color: #e50540;
@@ -586,8 +590,8 @@
     border:1px solid #ffda7e;
 }
 .igogotalk .h-tool li button{
-    width: 1rem;
-    height: 1rem;
+    width:90%;
+    height:100%;
 }
 .igogotalk .h-tool li .header-tool-extend .h-tool-measure{
 
@@ -666,22 +670,22 @@
     color: #3278fe!important;
 }
 /* 小工具图标 */
-.h-tool .tool-pencil-extend ul li:nth-of-type(1) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(1) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_qianbi.png')!important;
     background-size: 50%;
 
 }
-.h-tool .tool-pencil-extend ul li:nth-of-type(2) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(2) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_yingguangbi.png')!important;
     background-size: 50%;
 
 }
-.h-tool .tool-pencil-extend ul li:nth-of-type(3) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(3) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_xiantiao.png')!important;
     background-size: 50%;
 
 }
-.h-tool .tool-pencil-extend ul li:nth-of-type(4) span:before, .h-tool li.tl-pencil .header-tool[data-iconclass=tool_pencil] .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(4) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_jiantou.png')!important;
     background-size: 50%;
 

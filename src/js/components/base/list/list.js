@@ -35,7 +35,7 @@ class ListDumb extends React.Component{
             }
             return {listItemContextArray:listItemContextArray};
         }
-        const listItemArray = [] ;
+        const listItemArray = [];
         if(listItemDataArray){
             listItemDataArray.forEach( (value , index) =>{
                 value = value || {} ;
