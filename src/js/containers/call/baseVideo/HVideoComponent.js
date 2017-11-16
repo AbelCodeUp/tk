@@ -613,10 +613,14 @@ class HVideoComponent extends React.Component{
                 <div  className="video-wrap video-participant-wrap video-other-wrap add-position-relative" >
                     {this.props.stream.getID()>0 || this.props.stream.getID()=='local'?<Video stream={this.props.stream} classCss={this.state.classCss} ></Video>:undefined }
                     <div className="v-name-wrap clear-float other-name " >
-                        <span className="v-name add-nowrap add-fl"  >{userNickName}</span>
+                        <span className="v-name add-nowrap add-fl"  >
+                            {userNickName}
+                            <span className="gift-icon"></span>X
+                            <span className="gift-num">{giftnumber}</span>
+                        </span>
                         <span className="v-device-open-close add-fr clear-float">
-                        {afterElementArray}
-                    </span>
+                            {afterElementArray}
+                        </span>
                     </div>
                     <div className="gift-show-container " style={{display: assistantFlag?'none':''}}>
                         <span className="gift-icon"></span>

@@ -520,6 +520,7 @@ class VVideoComponent extends React.Component{
             assistantFlag&&TkGlobal.classBegin?buttonsStyle = "":buttonsStyle = "none";
         }
         let studentStyle = this.props.showGift?((that.props.classCss.indexOf("video-hearer-wrap")==-1)?"none":"block"):"none";
+        let studentStyle_g = this.props.showGift?((that.props.classCss.indexOf("video-hearer-wrap")==-1)?"none":"inline"):"none";
         let userNickName = that.state.userNickName;
         let studentButton = CoreController.handler.getAppPermissions('studentVframeBtnIsHide')?"none":"";
         //gogotalk
@@ -531,15 +532,18 @@ class VVideoComponent extends React.Component{
                         <div className="igogo_img_video_two"></div>
                         {this.props.stream.getID()>0 || this.props.stream.getID()=='local'?<Video stream={this.props.stream} classCss={this.state.classCss} ></Video>:undefined }
                         <div className="v-name-wrap clear-float other-name " >
-                            <span className="v-name add-nowrap add-fl"  >{userNickName}</span>
+                            <span className="v-name add-nowrap add-fl"  >
+                                {userNickName}
+                                <span className="gogo_gift" style={{display: studentStyle_g}}>
+                                    <span className="gift-icon"></span>X
+                                    <span className="gift-num">{giftnumber}</span>
+                                </span>
+                            </span>
                             <span className="v-device-open-close add-fr clear-float"  style={{display: studentStyle}}>
                                 {afterElementArray}
                             </span>
                         </div>
-                        <div className="gift-show-container"  style={{display: studentStyle}} >
-                            <span className="gift-icon"></span>
-                            <span className="gift-num">{giftnumber}</span>
-                        </div>
+                        
                         <div className="video-hover-function-container"  style={{display:buttonsStyle}} >
                             <span className="button-set role-student" onDoubleClick={ (e) => { e.stopPropagation(); return false ; } } >
                                 {buttonElementArray}

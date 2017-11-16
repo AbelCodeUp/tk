@@ -91,8 +91,9 @@ class WhiteboardToolBarSmart extends React.Component {
         this._changeCanDrawPermissions();
     };
     /*所有li的点击事件处理*/
-    allLiClick(clickId, active = false, more = false, removeOtherActive = true) {
-        $('.FreeScrollbar-vertical-track').css('zIndex', -1);
+    allLiClick(clickId, active = false, more = false, removeOtherActive = true, event) {
+        $('.FreeScrollbar-vertical-track').css('zIndex', -1); //滚动条
+
         let $li = $("#header_tool_vessel").find("li");
         if (removeOtherActive) {
             $li.removeClass('active');
@@ -110,8 +111,13 @@ class WhiteboardToolBarSmart extends React.Component {
                     $filterLi.removeClass('active');
                 }
             }
+
+            this.props.incallback(); //gogotalk新增层级提升
+
+
         } else {
             $li.removeClass('more');
+            this.props.outcallback();//gogotalk新增层级提升
         }
         if (clickId !== 'whiteboard_tool_vessel_text') {
             $li.filter("#" + clickId).find(".header-tool-extend li[data-select=true]").trigger('click', [true]);
@@ -234,6 +240,10 @@ class WhiteboardToolBarSmart extends React.Component {
     };
 
     // gogo新增点击图标改变父组件层级
+    _isHaveZi (event){
+        console.log(event);
+        console.log($(event.target).find('ol').find('.tool-li').children('button'))
+    }
     
 
     render() {
@@ -249,9 +259,11 @@ class WhiteboardToolBarSmart extends React.Component {
         //新增条件学生画笔是否可点击
         let isClick = !this.state.show ? { pointerEvents:'none' }:{};
 
+
+
         return (
             // gogotalk
-            <div className="gogoleftbar" onClick={this.props.incallback} style={{ width: '4rem', position: 'relative', zIndex: '999' }}>
+            <div className="gogoleftbar" style={{ width: '4rem', position: 'relative', zIndex: '999' }}>
                 <FreeScrollBar style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
                     <ol className="add-fl gogo_leftbar_ban clear-float h-tool" id="header_tool_vessel" style={isClick}  > {/*白板工具栏*/}
                         <li className="tool-li tl-mouse" id="whiteboard_tool_vessel_mouse" style={{ display: !mouse ? 'none' : undefined }} >
@@ -334,9 +346,9 @@ class WhiteboardToolBarSmart extends React.Component {
                         <li className="tool-li tl-color" id="whiteboard_tool_vessel_color_strokesize" onMouseLeave={that.allLiMouseLeave.bind(that, 'whiteboard_tool_vessel_color_strokesize')} style={{ display: !colorAndSize ? 'none' : undefined }} >
                             <button className="header-tool" id="tool_stroke_color_vessel" title={TkGlobal.language.languageData.header.tool.colorAndMeasure.title} onClick={that.allLiClick.bind(that, 'whiteboard_tool_vessel_color_strokesize', true, true, false)} >
                                 <span id="tool_stroke_color" className="tool-img-wrap h-tool-color no-hover">
-                                    <span data-curr-type="simple" data-curr-color="000000" className="tool-color-show tk-tool-color" id="header_curr_color" style={{ backgroundColor: "#" + that.state.selectColor }} >
+                                    {/* <span data-curr-type="simple" data-curr-color="000000" className="tool-color-show tk-tool-color" id="header_curr_color" style={{ backgroundColor: "#" + that.state.selectColor }} >
                                         <span className="tool_triangle"></span>
-                                    </span>
+                                    </span> */}
                                 </span>
                             </button>
                             <div className="header-tool-extend tool-color-extend clear-float tk-tool-color-extend" >

@@ -50,6 +50,8 @@ class LeftToolBarVesselSmart extends React.Component {
 
     render() {
         let that = this;
+        let _DomStyle = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne 
+        ? { zIndex:this.state.isZindex }:{};
         // alert(TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne)
         let _ToolDom = TkGlobal.format == "igogotalk" && TkConstant.joinRoomInfo.roomtype == TkConstant.ROOMTYPE.oneToOne
             ?
@@ -64,7 +66,7 @@ class LeftToolBarVesselSmart extends React.Component {
             :
             <div><ToolButtonVesselSmart /><ToolExtendListVesselSmart /></div>; //判断gogotalk与一对一加载一套样式
         return (
-            <article id="tool_container" style={{ zIndex:this.state.isZindex }} className="tool-container add-position-relative add-fl" >{/*工具区域*/}
+            <article id="tool_container" style={ _DomStyle } className="tool-container add-position-relative add-fl" >{/*工具区域*/}
                 {
                     _ToolDom
                 }

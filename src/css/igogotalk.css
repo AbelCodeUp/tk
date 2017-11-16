@@ -85,12 +85,17 @@
    
 }
 .igogotalk .left_bar_bottom_bg{
-    width: 2.5rem;
+    width: 2.2rem;
     position: absolute;
     height: 3rem;
     bottom: -1rem;
+    left: -0.5rem;
     background-image: url('../img/gogo_img/icon_Christmas_ren.png');
     background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.igogotalk .big-literally-wrap{
+    /* top: 45%!important; */
 }
 .igogotalk .header-wrap .tool-icon-wrap .tl-left-document-list{
     
@@ -131,6 +136,7 @@
 /* end */
 .igogotalk .gogoleftbar{
     height: calc(100% - 2.2rem)!important;
+    width: 3rem!important;
 }
 
 .igogotalk .lc-drawing canvas:nth-last-child(1){
@@ -150,10 +156,10 @@
     border-bottom:0.01rem solid #2260d4;
 }
 .igogotalk .FreeScrollbar-vertical-track {
-    right: 2.8rem!important;
+    right: 1.87rem!important;
 }
 .igogotalk .header-tool-extend-option-wrap{
-    border-top:0.01rem solid #2260d4;
+    color:#ce9912!important;
 }
 .igogotalk .page-print .curr-page{
 	border-color: #fff;
@@ -169,7 +175,7 @@
 .igogotalk .gogotalk_leftbar_box ol{
     /* overflow: auto; */
     /* width: 100%; */
-    width: 1.3rem;
+    width: 1.2rem;
 }
 .igogotalk .gogotalk_leftbar_box .gogo_leftbar_ban{
     border:0.08rem solid transparent;
@@ -188,8 +194,8 @@
     background: rgba(0,0,0,0.3)!important;
 }
 .igogotalk .gogotalk_leftbar_box ol>li{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 100%;
+    height: 0.9rem;
     float: none;
     margin: 0 auto;
     border-bottom: 0.1rem solid transparent;
@@ -206,7 +212,7 @@
     height: 1.3rem;
     background: url('../img/gogo_img/leftbar_top.png')no-repeat center;
     background-size: 100% 100%;
-    width: 2rem;
+    width: 1.9rem;
     margin-left: -0.3rem;
     margin-bottom: -0.06rem;
 }
@@ -368,7 +374,7 @@
 
     padding: 0 0.1rem;
 
-    bottom: -0.4rem!important;
+    bottom: -0.7rem!important;
 
 }
 .igogotalk .chat-subject{
@@ -402,9 +408,28 @@
     color: #fff;
     border-radius: 50%;
     position: absolute;
-    top:-0.14rem;
+    top:0;
     z-index: 99999999;
-    left: 0.1rem;
+    left: 0;
+    border:1px solid #fff;
+}
+.igogotalk .alert-title{
+    background: #e50540!important;
+}
+.igogotalk .alert-box{
+    background: #fff!important;
+}
+.igogotalk .alert-contant{
+    color: #1c1c1c!important;
+}
+.igogotalk .alert-isOk button{
+    background: #e50540!important;
+}
+.igogotalk .alert-isOk button.alert-cancel{
+    background: #4468d0!important;
+}
+.igogotalk .alert-isOk{
+    border-top: 0.01rem solid #e50540!important;
 }
 .igogotalk #chatbox{
     /* background-image:url('../img/gogo_img/icon_bg_bingkuai.png') ; */
@@ -425,6 +450,19 @@
     padding: 0.12rem;
     position: relative;
 }
+.igogotalk .video-hover-function-container,.igogotalk .video-student-set-container{
+    left: 0.14rem!important;
+    top: 0.14rem!important;
+    width: 90%!important;
+    height: 80%!important;
+    z-index: 100!important;
+    /* display: block!important; */
+}
+.igogotalk .video-hover-function-container button, .igogotalk .video-student-set-container button{
+    background: #fff!important;
+    color:#cc3333!important;
+    border: 2px solid #cc3333!important;
+}
 .igogotalk .chat_top_box .closeChat{
     width: 0.3rem;
     height: 0.3rem;
@@ -433,8 +471,8 @@
     line-height: 0.3rem;
     background: #fff;
     position: absolute;
-    right: 0.1rem;
-    top: -0.3rem;
+    right: 0;
+    top: -0.01rem;
     border-radius: 50%;
     color:#e50540;
     cursor: pointer;
@@ -562,10 +600,21 @@
     padding: 0 0.2rem;
     color: #ce9912!important;
 }
+.igogotalk .h-tool .header-tool-extend ul li span{
+    color: #ce9912!important;
+}
+.igogotalk .header-tool-extend{
+    color: #ce9912!important;
+    border-bottom: 1px solid #ce9912;
+}
+.igogotalk .h-tool-measure.active {
+    border-color: #ffcc66!important;
+}
 .igogotalk .h-tool  .header-tool-extend ul li[data-select=true]{
     background: none!important;
     color:#684b02;
 }
+
 /*  */
 .igogotalk .h-tool li.active .header-tool{ 
     background: rgba(255, 244, 217, 0.9)
@@ -573,7 +622,7 @@
 .igogotalk .h-tool .tool-pencil-extend ul li, .igogotalk .h-tool .tool-text-extend ul li, .igogotalk .h-tool .tool-shape-extend ul li{
     border-bottom: 0.01rem solid #ffda7e!important;
 }
-.igogotalk .header-tool-extend.tool-color-extend{
+.igogotalk .header-tool-extend{
     overflow: initial;
 }
 .igogotalk .h-tool li .header-tool-extend{
@@ -588,6 +637,17 @@
     background: #fdeabb;
     border-radius: 0.15rem;
     border:1px solid #ffda7e;
+
+    overflow: hidden;
+}
+.igogotalk .h-tool li span.tool-img-wrap.h-tool-color{
+    background-image: url('../img/gogo_img/left_bar_tiaoseban.png')!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+}
+.igogotalk .tool-measure-container{
+    height: auto!important;
 }
 .igogotalk .h-tool li button{
     width:90%;
@@ -631,9 +691,6 @@
     overflow: hidden;
 }
 
-.igogotalk .h-tool li .header-tool-extend{
-    
-}
 .igogotalk .h-tool .tool-pencil-extend ul,.igogotalk .h-tool  .tool-text-extend,.igogotalk .h-tool .tool-shape-extend ul{
     border-radius: 0.15rem;
 }
@@ -670,25 +727,41 @@
     color: #3278fe!important;
 }
 /* 小工具图标 */
-.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(1) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(1) span:before{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_qianbi.png')!important;
     background-size: 50%;
 
 }
-.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(2) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(2) span:before{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_yingguangbi.png')!important;
     background-size: 50%;
 
 }
-.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(3) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(3) span:before{
     background-image: url('../img/gogo_img/icon_item/left_draw_item_xiantiao.png')!important;
     background-size: 50%;
 
 }
-.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(4) span:before, .h-tool li.tl-pencil .header-tool .tool-img-wrap{
-    background-image: url('../img/gogo_img/icon_item/left_draw_item_jiantou.png')!important;
+.igogotalk .h-tool .tool-pencil-extend ul li:nth-of-type(4) span:before{
+    background-image: url('../img/gogo_img/icon_item/left_draw_item_qianbi.png')!important;
     background-size: 50%;
 
+}
+.igogotalk .h-tool .tool-shape-extend ul li:nth-of-type(1) span:before {
+    background-image: url('../img/gogo_img/icon_item/left_draw_item_kongxinjx.png')!important;
+    background-size: 50%;
+}
+.igogotalk .h-tool .tool-shape-extend ul li:nth-of-type(2) span:before{
+    background-image: url(../img/gogo_img/icon_item/left_draw_item_kongxinjx_active.png)!important;
+    background-size: 50%;
+}
+.igogotalk .h-tool .tool-shape-extend ul li:nth-of-type(3) span:before{
+    background-image: url(../img/gogo_img/icon_item/left_draw_item_kongxinyuan.png)!important;
+    background-size: 50%;
+}
+.igogotalk .h-tool .tool-shape-extend ul li:nth-of-type(4) span:before{
+    background-image: url(../img/gogo_img/icon_item/left_draw_item_tuoyuan.png)!important;
+    background-size: 50%;
 }
 /* icon start*/
 .igogotalk .h-tool{
@@ -702,43 +775,50 @@
 }
 .igogotalk .h-tool li.tl-mouse .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_huojian.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-laser .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_jiguangbi.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-pencil .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_qianbi.png')!important;
-    background-size: 50% 50%;
+    background-size: auto 71%;
 }
 .igogotalk .h-tool li.tl-text .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_shuru.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-shape .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_juxing.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-undo .header-tool.disabled  .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_chexiao.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-eraser .header-tool.disabled  .tool-img-wrap{
     background-image: url('../img/gogo_img/left_bar_xiangpi.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-clear .header-tool.disabled  .tool-img-wrap{
     background-image: url('../img/gogo_img/icon_delete.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li.tl-clear .tool-img-wrap{
     background-image: url('../img/gogo_img/icon_delete.png')!important;
-    background-size: 50% 50%;
+    background-size: 50%;
 }
 .igogotalk .h-tool li .tool-img-wrap .tool_triangle{
     background: url('../img/gogo_img/icon_tianchong.png') no-repeat center!important;
-    background-size: 50% 50%;
+    background-size: 50%;
+}
+.igogotalk .v-name-wrap{
+    height: 0.32rem!important;
+}
+.igogotalk .v-name-wrap *{
+    display: inline-block;
+    vertical-align: middle;
 }
 /* icon end */
 .igogotalk .curtom-select .select_option li:hover{
@@ -770,12 +850,12 @@
 .igogotalk .h-btn-wrap .h-room-end{
     color: #F0390D;
     background: #dbdbdb;
-    box-shadow: 0 0 3px #eee;
+    box-shadow: 0 0 5px #000;
 }
 .igogotalk .h-btn-wrap .h-room-start{
     color: #F0390D;
     background: #fff;
-    box-shadow: 0 0 3px #eee;
+    box-shadow: 0 0 5px #000;
 }
 .igogotalk .h-btn-wrap .h-room-start:hover{
     color: #F0390D!important;
@@ -783,7 +863,7 @@
 }
 .igogotalk .h-btn-wrap .h-room-end:hover{
     color: #F0390D!important;
-    background: #dbdbdb!important;
+    /* background: #dbdbdb!important; */
 }
 .igogotalk .send-message-btn{
     background-color: #3278fe;
@@ -801,36 +881,58 @@
 }
 
 /*换色图标*/
+.igogotalk .gogo_gift{
+    margin-left: 0.2rem;
+}
+.igogotalk .gogo_gift,.igogotalk .gogo_gift span{
+    color:#ffdf02!important;
+}
+.igogotalk .gogo_gift .gift-icon{
+    background-image: url(../img/gogo_img/gogo_gift.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 -3px;
+    height: 0.3rem;
+    width: 0.22rem;
+
+}  
+.igogotalk .v-name-wrap .v-device-open-close{
+    padding-right: 0.15rem;
+}
+.igogotalk .v-name-wrap .v-device-open-close button {
+    background-size: auto 80%!important;
+}
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.v-user-update-icon.on,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-user-update.on {
     background-image: url(../img/call_layout/left/video/icon_user_onyellow.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.audio-icon.on,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-device-microphone.on {
-    background-image: url(../img/call_layout/left/video/icon_audio_onyellow.png);
+    background-image: url(../img/gogo_img/icon_maikefeng.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.pencil-icon.on,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-user-pen.on {
-    background-image: url(../img/call_layout/left/video/icon_tools_onyellow.png);
+    ackground-image: url(../img/gogo_img/icon_item/icon_huabi.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.pencil-icon.on,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-user-pen.on {
-    background-image: url(../img/call_layout/left/video/icon_tools_onyellow.png);
+    ackground-image: url(../img/gogo_img/icon_item/icon_huabi.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.pencil-icon.on,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-user-pen.on {
-    background-image: url(../img/call_layout/left/video/icon_tools_onyellow.png);
+    background-image: url(../img/gogo_img/icon_item/icon_huabi.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.v-user-update-icon.up.disabled,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-user-update.up.disabled {
     background-image: url(../img/call_layout/left/video/icon_user_onyellow.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.pencil-icon.on.disabled,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-user-pen.on.disabled {
-    background-image: url(../img/call_layout/left/video/icon_tools_onyellow.png)!important;
+    background-image: url(../img/gogo_img/icon_item/icon_huabi.png)!important;
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container button.audio-icon.on.disabled,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-device-microphone.on.disabled {
-    background-image: url(../img/call_layout/left/video/icon_audio_onyellow.png);
+    background-image: url(../img/gogo_img/icon_maikefeng.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container .tk-listitem-icon.video-icon.on,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-device-video.on{
-	background-image: url(../img/call_layout/left/video/icon_camera_on.png);
+	background-image: url(../img/gogo_img/icon_shexiangtou.png);
 }
 .igogotalk .t-participant-user-list li .tk-icon-after-container .tk-listitem-icon.video-icon.off,.igogotalk .video-participant-wrap .v-name-wrap .v-device-open-close .v-device-video.off{
-	background-image: url(../img/call_layout/left/video/icon_camera_off.png);
+	background-image: url(../img/gogo_img/icon_shexiangtou.png);
 }
+
 
 /*鼠标滑过改变图片*/
 .igogotalk .tool-container .tool-icon.tl-left-document-list:hover {
@@ -874,10 +976,11 @@
     background-image: url(../img/gogo_img/left_bar_chexiao.png);
     background-size: 50% 50%;
 }
-.igogotalk .h-tool li.tl-redo .tool-img-wrap {
+.igogotalk .h-tool li.tl-redo .tool-img-wrap,.igogotalk .h-tool li.tl-redo .header-tool.disabled .tool-img-wrap {
     background-image: url(../img/gogo_img/left_bar_huifu.png);
     background-size: 50% 50%;
 }
+
 
 .igogotalk .h-tool li.tl-eraser .tool-img-wrap{
     background-image: url(../img/gogo_img/left_bar_xiangpi.png);
@@ -925,8 +1028,11 @@
 .igogotalk .h-btn-wrap .h-room-start:hover {
     background: #32cfa0;
 }
+.igogotalk .h-btn-wrap .h-room-end{
+    background-color: #fff!important;
+}
 .igogotalk .h-btn-wrap .h-room-end:hover{
-    background-color: #ef5d3a;
+    background-color: #fff!important;
 }
 .igogotalk .h-btn-wrap .h-room-raise:hover{
     background-color: #ef5d3a;
@@ -952,8 +1058,28 @@
     height: 1rem;
     width: 1rem;
     background: url('../img/gogo_img/g_xuehua.png')no-repeat;
-    background-size: 100% 100%; 
-    z-index: 1;
+    background-size: 100% auto; 
+    z-index: 101;
+}
+.igogotalk .video-container .video-chairman-wrap .video-wrap .igogo_img_video_two{
+    position: absolute;
+    bottom: -2px;
+    right: -5px;
+    height: 0.65rem;
+    width: 0.65rem;
+    background: url('../img/gogo_img/icon_teacher_img_two.png')no-repeat;
+    background-size: 100% auto; 
+    z-index: 101;
+}
+.igogotalk .video-container .video-hearer-wrap{
+    margin-top: 0.3rem;
+}
+.igogotalk .v-name-wrap{
+    background: #fff!important;
+    color:#1c1c1c;
+}
+.igogotalk .v-name-wrap span{
+    color:#1c1c1c;
 }
 .igogotalk .video-container .video-hearer-wrap .video-wrap .igogo_img_video{
     position: absolute;
@@ -962,8 +1088,8 @@
     height: 0.7rem;
     width: 1.3rem;
     background: url('../img/gogo_img/g_manzi_1.png')no-repeat;
-    background-size: 100% 100%; 
-    z-index: 1;
+    background-size: 100% auto; 
+    z-index: 101;
 }
 .igogotalk .video-container .video-hearer-wrap .video-wrap .igogo_img_video_two{
     position: absolute;
@@ -972,8 +1098,8 @@
     height: 1rem;
     width: 1rem;
     background: url('../img/gogo_img/g_manzi_2.png')no-repeat;
-    z-index: 1;
-    background-size: 100% 100%;
+    z-index: 101;
+    background-size: 100% auto;
 }
 
 
