@@ -459,14 +459,14 @@ if(sourceMap){
  * （开启热更新，并自动打开浏览器）
  * */
 if (devServer) {
-    var devServerIp = '192.168.0.104';
+    var devServerIp = '192.168.0.106';
     var devServerPort = 8444 ;
     var devServerProtocol = 'https';
     var devServerRouter = 'login' ;
-    // var devServerParams = 'host=192.168.1.17&domain=test&param=UaToBLfsrWeCdYeh31Ap-0s9ujQlWvQ7lQtJ-oYK2RB1aG6o213PiuuirpYuIGgvUsq38DOIoR8L3U9F7potC2_HEJYOSwEM1dqDJcR1Ajmi_PASpcmL04f_ZLe_r3f70cBPvzrYYWgtSOFbtIF2Ng&roomtype=0&timestamp='+new Date().getTime(); 
+    var devServerParams = 'host=192.168.1.17&domain=test&param=UaToBLfsrWeCdYeh31Ap-0s9ujQlWvQ7lQtJ-oYK2RB1aG6o213PiuuirpYuIGgvUsq38DOIoR8L3U9F7potC2_HEJYOSwEM1dqDJcR1Ajmi_PASpcmL04f_ZLe_r3f70cBPvzrYYWgtSOFbtIF2Ng&roomtype=0&timestamp='+new Date().getTime(); 
     // var devServerParams = 'host=192.168.1.17&domain=test&param=UaToBLfsrWeCdYeh31Ap-0s9ujQlWvQ7WJWrsxt8-Sg15NDR1_DhoLpO-ZENxEMN_Uf-du-RAPVhKGpP-h0YzGbHk_-HRRiX-ykZFg-TjQah_9U9Ee58grREa2Q2DE8gEQ2PzRG31zRbfIl7PR0ENg&roomtype=0&timestamp=' + new Date().getTime();
     //一对多
-    var devServerParams = 'host=192.168.1.17&domain=test&param=3D65UhfvyZE0gy2xedm97l5RyblPmmLaXvrrXYdKq7w15NDR1_DhoLpO-ZENxEMNkAC9_K82Ugw8mN2mF0vqI4h0jxFLA81dvA53emAXoK6J6lnPwOTb8jZnQeKG8nWp7jO-DCQF8QARQDT6NC5BvQ&roomtype=3&timestamp='+new Date().getTime();
+    // var devServerParams = 'host=192.168.1.17&domain=test&param=3D65UhfvyZE0gy2xedm97l5RyblPmmLaXvrrXYdKq7w15NDR1_DhoLpO-ZENxEMNkAC9_K82Ugw8mN2mF0vqI4h0jxFLA81dvA53emAXoK6J6lnPwOTb8jZnQeKG8nWp7jO-DCQF8QARQDT6NC5BvQ&roomtype=3&timestamp='+new Date().getTime();
     config = Merge(
         config,
         {

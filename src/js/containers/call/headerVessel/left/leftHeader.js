@@ -26,7 +26,7 @@ class LeftHeaderSmart extends React.Component {
     render() {
         let that = this;
         return (
-            <article className="h-left-wrap clear-float add-fl add-position-relative" id="header_left">
+            <article className="h-left-wrap clear-float add-fl add-position-relative" id="header_left" style={ {marginLeft: TkGlobal.classBegin ? '0' : '3rem'} }>
                 <span className="add-block add-fl h-logo-wrap add-display-none"></span>
                 { !TkGlobal.playback ?  <NetworkStatusSmart />: undefined }
                 { !TkGlobal.playback ? <AudioPlayerSmart /> : undefined }

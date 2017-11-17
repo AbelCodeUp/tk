@@ -511,7 +511,7 @@ class ChatBox extends Component {
 					<section className="chat-part" style={{ display: this.state.index == '0' ? 'block' : 'none' }}>
 						<div style={{ height: '100%' }}>
 							<div className="chat_top_box" style={chatbox}>
-								<div className="closeChat" onClick={this.closeChatBox.bind(this)}>&times;</div>
+								<div className="closeChat" onClick={this.closeChatBox.bind(this)}></div>
 								<ul className="chat-list custom-scroll-bar">
 									{
 										this.state.chatList.map(function (value, index) {

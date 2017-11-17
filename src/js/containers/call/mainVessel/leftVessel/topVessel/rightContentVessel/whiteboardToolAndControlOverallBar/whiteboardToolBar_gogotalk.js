@@ -351,7 +351,7 @@ class WhiteboardToolBarSmart extends React.Component {
                                     </span> */}
                                 </span>
                             </button>
-                            <div className="header-tool-extend tool-color-extend clear-float tk-tool-color-extend" >
+                            <div className="header-tool-extend tool-color-extend clear-float tk-tool-color-extend" style={{height:'3.8rem!important '}} >
                                 <div className="tool-measure-container add-fl" id="tool_measure">
                                     <div className="h-tool-measure-title"><span>{TkGlobal.language.languageData.header.tool.colorAndMeasure.selectMeasure}</span></div>
                                     <div id="tool_color_measure_small" onClick={that.changeStrokeSizeClick.bind(that, 'tool_color_measure_small', { pencil: 5, text: 18, eraser: 15, shape: 5 })} className="h-tool-measure h-tool-measure-small active" data-pencil-size="5" data-text-size="18" data-eraser-size="15" data-shape-size="5"  >

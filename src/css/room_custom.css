@@ -15,8 +15,8 @@ li.disabled , span.disabled , .t-ul-option-wrap.disabled , .translate.disabled ,
 
 /*@desc header start*/
 .header-wrap{
-    /* background-color: #202c4a; */
-    height: 0.48rem;
+    background-color: #202c4a;
+    min-height: 0.48rem;
     display: -webkit-flex;
     display: -moz-flex;
     display: -o-flex;
@@ -40,19 +40,12 @@ li.disabled , span.disabled , .t-ul-option-wrap.disabled , .translate.disabled ,
 
 .lc-tool-container{
 	width: 0.5rem;
-	/* height: 100%; */
+	/*height: 100%;*/
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 0rem;
 	transition: all 0.5s;
 	z-index: 121;
-	overflow: hidden;
-}
-.lc-tool-container ol{
-	overflow: hidden;
-}
-.lc-tool-container ol li{
-	float: left;
 }
 .lc-tool-container .h-tool{
 	background-color: #202c4a;
@@ -304,7 +297,7 @@ li.disabled , span.disabled , .t-ul-option-wrap.disabled , .translate.disabled ,
 /*========涂鸦工具拓展 start ======*/
 /*画笔 、 文字、 形状*/
 .h-tool .tool-pencil-extend ul  , .h-tool  .tool-text-extend ul ,.h-tool .tool-shape-extend ul {
-	background:red;
+	background: #161e32;
 	color: #fff;
 	font-size: 0.12rem;
 }

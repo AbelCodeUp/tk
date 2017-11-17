@@ -40,7 +40,7 @@ class HandlerCoreController {
             if(TkGlobal.format == "igogotalk"){
                 $(document.body).removeClass("igogotalk").attr("data-company" , TkGlobal.format );
             }else{
-                $(document.body).removeClass("normal").addClass(TkGlobal.format).attr("data-company" , TkGlobal.format );
+                $(document.body).removeClass("igogotalk").addClass('normal').attr("data-company" , TkGlobal.format );
             }
         }
         // $(document.body).removeClass("normal igogotalk").addClass(TkGlobal.format).attr("data-company" , TkGlobal.format );
